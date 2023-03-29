@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class EnemyShoot : MonoBehaviour
+{
+//Script que faz o inimigo atirar pra frente 
+    public Transform pontaDaArma;
+    public GameObject tiroPrefab;
+    public float timeToShootEnemy = 0.1f;
+    private float timeSinceLastShotEnemy = 0.1f; 
+    
+    
+    
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        timeSinceLastShotEnemy += Time.fixedDeltaTime; 
+
+        if (timeSinceLastShotEnemy >= timeToShootEnemy)
+        {
+            GameObject tiro =  Instantiate(tiroPrefab, pontaDaArma.position, pontaDaArma.rotation);
+            Vector2 vector2 = transform.right * -500f;
+            tiro.GetComponent<Rigidbody>().velocity = new Vector2 (-500f,0);
+            timeSinceLastShotEnemy = 0.001f;
+            
+        }
+
+        
+    }
+}
