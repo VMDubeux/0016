@@ -8,12 +8,7 @@ public class SimpleAI : MonoBehaviour
     public float enemySpeed = 0.1f;
     private Vector3 targetPosition;    
     
-    void Start()
-    {
-        
-    }
-
-   
+     
     void FixedUpdate()
     {
         targetPosition = player.position;

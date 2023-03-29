@@ -283,6 +283,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 22623822, guid: bbb14176dbdad9b4aab56fbe8e5f3370, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 1109239631, guid: bbb14176dbdad9b4aab56fbe8e5f3370, type: 3}
       propertyPath: tiroPrefab
       value: 
@@ -553,6 +557,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 22623822, guid: bbb14176dbdad9b4aab56fbe8e5f3370, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 1109239631, guid: bbb14176dbdad9b4aab56fbe8e5f3370, type: 3}
       propertyPath: tiroPrefab
       value: 
@@ -781,7 +789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 200.17
-  vidaPlayer: 50000
+  vidaPlayer: 5
   arma: {fileID: 1832038487}
 --- !u!65 &1832038483
 BoxCollider:

@@ -14,7 +14,7 @@ public class VidaEnemy : MonoBehaviour
         {
             vidaEnemy --;
         }   
-            if (vidaEnemy == 0 || other.tag == "Player")
+            if (vidaEnemy <= 0 || other.tag == "Player")
             {
                 Destroy(gameObject);
             }
