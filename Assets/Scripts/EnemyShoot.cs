@@ -20,8 +20,7 @@ public class EnemyShoot : MonoBehaviour
         if (timeSinceLastShotEnemy >= timeToShootEnemy)
         {
             GameObject tiro =  Instantiate(tiroPrefab, pontaDaArma.position, pontaDaArma.rotation);
-            Vector2 vector2 = transform.right * -500f;
-            tiro.GetComponent<Rigidbody>().velocity = new Vector2 (-500f,0);
+            tiro.GetComponent<Rigidbody>().velocity = new Vector3 (-500f,0f,0f);
             timeSinceLastShotEnemy = 0.001f;
             
         }
