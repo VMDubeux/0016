@@ -183,7 +183,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8ff2760f976c5f04bb63e587ecaef3f7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pontaDaArma: {fileID: 22623823}
   tiroPrefab: {fileID: 5892998567449712463, guid: b4a9c90662afbc24a90e543f3193bbbe, type: 3}
-  timeToShootEnemy: 0.9
+  timeToShootEnemy: 1.5
 --- !u!1 &7523409498306803198
 GameObject:
   m_ObjectHideFlags: 0

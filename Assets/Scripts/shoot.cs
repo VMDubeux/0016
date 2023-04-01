@@ -10,10 +10,8 @@ public class shoot : MonoBehaviour
     public float timeToShoot = 0.1f;
     private float timeSinceLastShot = 0.2f;
     public float quantidadeArmas;
-    
-
-
-       // Update is called once per frame
+  
+    // Update is called once per frame
     void Update()
     {
                 
