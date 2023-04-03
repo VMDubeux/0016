@@ -6,14 +6,13 @@ public class Timer : MonoBehaviour
     private float currentTime = 0f; // tempo atual em segundos
     private bool isRunning = false; // indicador se o timer está rodando
 
-    // método chamado no início do jogo
+  
     private void Start()
     {
-        // iniciar o timer
+        
         StartTimer();
     }
 
-    // método chamado a cada quadro
     private void FixedUpdate()
     {
         if (isRunning)

@@ -8,10 +8,7 @@ public class Personagem : MonoBehaviour
     public float moveSpeed = 190f;
     public float vidaPlayer = 5f;
     public shoot arma;
-    public float limiteMaxVert;
-    public float limiteMaxHorz;
-    public float limiteMinVert;
-    public float limiteMinHorz;
+   
         void Update()
     {
         
@@ -33,7 +30,7 @@ public class Personagem : MonoBehaviour
             }
         }
 
-        if (vidaPlayer == 0 || other.tag == "Destruir")
+        if (vidaPlayer == 0 || other.tag == "Inimigo")
         {
             Destroy(gameObject);
             canvas.gameObject.SetActive(true);
