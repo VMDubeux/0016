@@ -9,6 +9,7 @@ TagManager:
   - TiroEnemy
   - PowerUp
   - Inimigo
+  - Music
   layers:
   - Default
   - TransparentFX

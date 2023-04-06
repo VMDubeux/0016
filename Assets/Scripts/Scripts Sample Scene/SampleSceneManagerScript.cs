@@ -15,7 +15,7 @@ public class SampleSceneManagerScript : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
-        SceneManager.LoadScene(mainMenuScene);
+        SceneManager.LoadScene (mainMenuScene);
     }
 
     public void ExitGame()
