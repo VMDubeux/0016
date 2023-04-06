@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Destroibala : MonoBehaviour
 {
- //Destói a porra do tiro do player
+ //Destrói o tiro do player
  void OnTriggerEnter(Collider other) 
  {
     if (other.tag == "Tiro" )

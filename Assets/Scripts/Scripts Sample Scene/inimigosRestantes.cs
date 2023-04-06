@@ -5,22 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class inimigosRestantes : MonoBehaviour
 {
-
+    [SerializeField] private string gameSceneRespawn;
     public GameObject enemies;
     private int enemiesCount;
 
-    private UIcontroller GetUIcontroller()
+    private SampleSceneManagerScript GetSampleSceneManagerScript()
     {
-        return enemies.GetComponent<UIcontroller>();
+        return enemies.GetComponent<SampleSceneManagerScript>();
     }
 
-    void FixedUpdate(UIcontroller uIcontroller)
+    void FixedUpdate(SampleSceneManagerScript uIcontroller)
     {
         
         if (enemiesCount == 0)
         {
                 {
-                  SceneManager.LoadScene(0);
+                  SceneManager.LoadScene(gameSceneRespawn);
                 }
         }
     }
