@@ -14,7 +14,7 @@ public class inimigosRestantes : MonoBehaviour
         return enemies.GetComponent<SampleSceneManagerScript>();
     }
 
-    void FixedUpdate(SampleSceneManagerScript uIcontroller)
+    void sceneManager(SampleSceneManagerScript uIcontroller)
     {
         
         if (enemiesCount == 0)
