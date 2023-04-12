@@ -10,6 +10,7 @@ public class shoot : MonoBehaviour
     public float timeToShoot = 0.1f;
     private float timeSinceLastShot = 0.2f;
     public float quantidadeArmas;
+    public AudioSource audioSource;
   
     // Update is called once per frame
     void Update()
@@ -25,8 +26,10 @@ public class shoot : MonoBehaviour
             Vector3 vector3 = transform.right * 500f;
             tiro.GetComponent<Rigidbody>().velocity = vector3;
             timeSinceLastShot = 0.7f; 
-        }
+
+            audioSource.Play();
             }
+        }
 
         
     }
