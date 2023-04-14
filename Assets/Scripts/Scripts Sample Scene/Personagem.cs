@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.UIElements;
@@ -15,6 +16,7 @@ public class Personagem : MonoBehaviour
     public bool moveLeft; //Criei variável lógica
     public bool moveRight; //Criei variável lógica
     public bool speedUp; //Criei variável lógica
+    public Vector2 limitMove;
 
     void Update()
     {
@@ -60,26 +62,28 @@ public class Personagem : MonoBehaviour
         moveLeft = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow);
         moveRight = Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow);
         speedUp = Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift);
+       
     }
 
     private Vector3 MoveConditionals(float moveAmount, Vector3 move) //Método (2)
     {
-        if (moveUp)
+        if (moveUp && transform.position.y <= limitMove.y)
         {
+
             move.y += moveAmount;
         }
 
-        if (moveDown)
+        if (moveDown && transform.position.y >= -limitMove.y)
         {
             move.y -= moveAmount;
         }
 
-        if (moveLeft)
+        if (moveLeft && transform.position.x >= -limitMove.x)
         {
             move.x -= moveAmount;
         }
 
-        if (moveRight)
+        if (moveRight && transform.position.x <= limitMove.x)
         {
             move.x += moveAmount;
         }

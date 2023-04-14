@@ -16,19 +16,21 @@ public class VidaEnemy : MonoBehaviour
         }   
             if (vidaEnemy <= 0 || other.tag == "Player")
             {
+            summonPowerUp();
                 Destroy(gameObject);
             }
         
         
     }
 
-    private void OnDestroy() 
+    private void summonPowerUp() 
     {
         int porcentagem = Random.Range(0,101);
         if (porcentagem >= 50)
         {
             GameObject tirasso = Instantiate(powerUp, transform.position, transform.rotation);
-                             
+            Vector3 vector3 = tirasso.transform.up * -100f;
+            tirasso.GetComponent<Rigidbody>().velocity = vector3;
         }
     }
 

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    public float totalTime = 3f; // tempo total em segundos
+    public float totalTime = 4f; // tempo total em segundos
     private float currentTime = 0f; // tempo atual em segundos
     private bool isRunning = false; // indicador se o timer está rodando
 
