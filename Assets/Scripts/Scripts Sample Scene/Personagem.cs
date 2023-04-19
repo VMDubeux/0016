@@ -114,7 +114,8 @@ public class Personagem : MonoBehaviour
         if (other.tag == "TiroEnemy")
         {
             vidaPlayer--;
-            hpPlayerBar.value = vidaPlayer; 
+            hpPlayerBar.value = vidaPlayer;
+            GameManager.instance.RecordPlus(-50);
             if (arma.quantidadeArmas != 1)
             {
                 arma.quantidadeArmas--;
