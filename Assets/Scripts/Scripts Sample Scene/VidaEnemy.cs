@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class VidaEnemy : MonoBehaviour
 {
     public float vidaEnemy = 3f;
+    public int pointsForGive;
     public GameObject powerUp;
 
 
@@ -14,10 +13,14 @@ public class VidaEnemy : MonoBehaviour
         {
             vidaEnemy --;
         }   
-            if (vidaEnemy <= 0 || other.tag == "Player")
+            if (vidaEnemy == 0 || other.tag == "Player")
             {
+
+            GameManager.instance.RecordPlus(pointsForGive);
             summonPowerUp();
-                Destroy(gameObject);
+            Destroy(gameObject);
+            
+            
             }
         
         
@@ -26,7 +29,7 @@ public class VidaEnemy : MonoBehaviour
     private void summonPowerUp() 
     {
         int porcentagem = Random.Range(0,101);
-        if (porcentagem >= 50)
+        if (porcentagem >= 70)
         {
             GameObject tirasso = Instantiate(powerUp, transform.position, transform.rotation);
             Vector3 vector3 = tirasso.transform.up * -100f;

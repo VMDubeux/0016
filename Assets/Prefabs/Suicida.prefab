@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 1717548021408234148}
   - component: {fileID: 1953576511}
   m_Layer: 0
-  m_Name: inimigo 2
+  m_Name: Suicida
   m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -240,7 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75efd3f093a995e4686f55bab1515f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaEnemy: 3
+  vidaEnemy: 5
+  pointsForGive: 100
   powerUp: {fileID: 6691824884767173174, guid: d533f808c0d02dd44be5ce47328fb4ec, type: 3}
 --- !u!1 &5810668567231088731
 GameObject:

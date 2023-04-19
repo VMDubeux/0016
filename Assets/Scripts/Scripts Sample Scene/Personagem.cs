@@ -1,15 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class Personagem : MonoBehaviour
 {
-    [SerializeField] public float moveSpeed = 190f; //Apliquei Serialize
-    [SerializeField] public float vidaPlayer = 5f; //Apliquei Serialize
+    
+    
+    private float moveSpeed = 190f; //Apliquei Serialize
+    private float vidaPlayer = 5f; //Apliquei Serialize
     public Canvas canvas;
+    public Slider hpPlayerBar;
     public shoot arma;
     public bool moveUp; //Criei variável lógica
     public bool moveDown; //Criei variável lógica
@@ -17,6 +16,13 @@ public class Personagem : MonoBehaviour
     public bool moveRight; //Criei variável lógica
     public bool speedUp; //Criei variável lógica
     public Vector2 limitMove;
+
+
+     void Start()
+     {
+     //   hpPlayerBar.value = 5f;
+
+     }
 
     void Update()
     {
@@ -108,6 +114,7 @@ public class Personagem : MonoBehaviour
         if (other.tag == "TiroEnemy")
         {
             vidaPlayer--;
+            hpPlayerBar.value = vidaPlayer; 
             if (arma.quantidadeArmas != 1)
             {
                 arma.quantidadeArmas--;

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PowerUp : MonoBehaviour
@@ -10,8 +8,7 @@ public class PowerUp : MonoBehaviour
   {
      if (other.CompareTag("Player"))
      {
-      Debug.Log("Entrou em colisão");
-        //lançar o efeito
+       //lançar o efeito
         armaPlayer = other.GetComponent<shoot>();
         if (armaPlayer.quantidadeArmas < 3)
         {

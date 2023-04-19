@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 6749555832676770031}
   - component: {fileID: 1109239631}
   m_Layer: 0
-  m_Name: inimigo 1
+  m_Name: Atirador
   m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,6 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaEnemy: 3
+  pointsForGive: 100
   powerUp: {fileID: 6691824884767173174, guid: d533f808c0d02dd44be5ce47328fb4ec, type: 3}
 --- !u!114 &1109239631
 MonoBehaviour:
