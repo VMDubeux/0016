@@ -4,7 +4,7 @@ public class VidaEnemy : MonoBehaviour
 {
     public float vidaEnemy = 3f;
     public int pointsForGive;
-    public GameObject powerUp;
+    public GameObject multGun;
 
 
     private void OnTriggerEnter(Collider other) 
@@ -31,7 +31,7 @@ public class VidaEnemy : MonoBehaviour
         int porcentagem = Random.Range(0,101);
         if (porcentagem >= 70)
         {
-            GameObject tirasso = Instantiate(powerUp, transform.position, transform.rotation);
+            GameObject tirasso = Instantiate(multGun, transform.position, transform.rotation);
             Vector3 vector3 = tirasso.transform.up * -100f;
             tirasso.GetComponent<Rigidbody>().velocity = vector3;
         }
