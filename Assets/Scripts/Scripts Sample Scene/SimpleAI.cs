@@ -26,6 +26,8 @@ public class SimpleAI : MonoBehaviour
             transform.rotation = Quaternion.Euler(-90f, 0f, -90);
         }
     }
+
+    
 }
 
     

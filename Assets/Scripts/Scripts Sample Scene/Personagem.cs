@@ -3,10 +3,11 @@ using UnityEngine.UI;
 
 public class Personagem : MonoBehaviour
 {
-    
-    
-    private float moveSpeed = 190f; //Apliquei Serialize
-    private float vidaPlayer = 5f; //Apliquei Serialize
+
+
+    [SerializeField] private float moveSpeed; //Apliquei Serialize
+    [SerializeField] private float vidaPlayer; //Apliquei Serialize
+    [SerializeField] private float vidaPlayerAtual;
     public Canvas canvas;
     public Slider hpPlayerBar;
     public shoot arma;
@@ -20,7 +21,10 @@ public class Personagem : MonoBehaviour
 
      void Start()
      {
-     //   hpPlayerBar.value = 5f;
+        vidaPlayerAtual = vidaPlayer;
+
+        hpPlayerBar.maxValue = vidaPlayer;
+        hpPlayerBar.value = vidaPlayerAtual;
 
      }
 
@@ -108,13 +112,25 @@ public class Personagem : MonoBehaviour
 
         return move;
     }
+    public void ganharVida(float VidaParaReceber) //Recebendo vida
+    {
+        if (vidaPlayerAtual + VidaParaReceber <= vidaPlayer)
+        {
+            vidaPlayerAtual = VidaParaReceber;
+        }
+        else
+        {
+            vidaPlayerAtual = vidaPlayer;
+        }
 
-    void OnTriggerEnter(Collider other)
+        hpPlayerBar.value = vidaPlayerAtual;
+    }
+    void OnTriggerEnter(Collider other) //Dano do inimigo no player
     {
         if (other.tag == "TiroEnemy")
         {
-            vidaPlayer--;
-            hpPlayerBar.value = vidaPlayer;
+            vidaPlayerAtual --;
+            hpPlayerBar.value = vidaPlayerAtual;
             GameManager.instance.RecordPlus(-50);
             if (arma.quantidadeArmas != 1)
             {
@@ -122,7 +138,7 @@ public class Personagem : MonoBehaviour
             }
         }
 
-        if (vidaPlayer == 0 || other.tag == "Inimigo")
+        if (vidaPlayerAtual == 0 || other.tag == "Inimigo")
         {
             Destroy(gameObject);
             canvas.gameObject.SetActive(true);
