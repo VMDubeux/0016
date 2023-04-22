@@ -3467,6 +3467,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1688415628813782286, guid: 8a98d5432119a6d4bbb6e52c7ee499f0, type: 3}
+      propertyPath: multGun
+      value: 
+      objectReference: {fileID: 5734103737165884767, guid: 164b595a1e6c88b41abd22957b7970c7, type: 3}
     - target: {fileID: 1688415628813782287, guid: 8a98d5432119a6d4bbb6e52c7ee499f0, type: 3}
       propertyPath: player
       value: 
@@ -3488,10 +3492,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Atirador
       objectReference: {fileID: 0}
-    - target: {fileID: 1797167210489644909, guid: bbb14176dbdad9b4aab56fbe8e5f3370, type: 3}
-      propertyPath: powerUp
-      value: 
-      objectReference: {fileID: 5734103737165884767, guid: 164b595a1e6c88b41abd22957b7970c7, type: 3}
     - target: {fileID: 2268243505348612401, guid: bbb14176dbdad9b4aab56fbe8e5f3370, type: 3}
       propertyPath: m_RootOrder
       value: 0

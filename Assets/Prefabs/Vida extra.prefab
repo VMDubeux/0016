@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 1184450497339919617}
   - component: {fileID: 203570332}
   - component: {fileID: 203570336}
+  - component: {fileID: 276649758}
   m_Layer: 0
   m_Name: Vida extra
-  m_TagString: Untagged
+  m_TagString: PowerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,3 +129,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaParaDar: 3
+--- !u!114 &276649758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4980700237159281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46aba1d736254694d86ec03805d4b1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempoDeVida: 5
