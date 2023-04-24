@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1797167210489644911}
   - component: {fileID: 1797167210489644908}
   - component: {fileID: 1797167210489644909}
+  - component: {fileID: 543450652733196919}
   m_Layer: 0
   m_Name: Atirador
   m_TagString: Inimigo
@@ -160,6 +161,20 @@ MonoBehaviour:
   vidaEnemy: 3
   pointsForGive: 50
   multGun: {fileID: 5734103737165884767, guid: 164b595a1e6c88b41abd22957b7970c7, type: 3}
+--- !u!114 &543450652733196919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455150724472392587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8733e032a91076e47b93fd90b127ae0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  EnemySpeed: 50
 --- !u!1 &1797167210275632321
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,16 +2,16 @@ using UnityEngine;
 
 public class SimpleAI : MonoBehaviour
 {
-    public Transform player;
-    public float enemySpeed = 0.1f;
+    public Transform Player;
+    public float EnemySpeed = 0.1f;
     private Vector3 targetPosition;
     private bool enemyLook;
 
 
     void FixedUpdate()
     {
-        targetPosition = player.position;
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, enemySpeed * Time.fixedDeltaTime);
+        targetPosition = Player.position;
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, EnemySpeed * Time.fixedDeltaTime);
 
         enemyLook = targetPosition.x - transform.position.x >= 0;
 
@@ -26,10 +26,8 @@ public class SimpleAI : MonoBehaviour
             transform.rotation = Quaternion.Euler(-90f, 0f, -90);
         }
     }
-
-    
 }
 
-    
 
-    
+
+
