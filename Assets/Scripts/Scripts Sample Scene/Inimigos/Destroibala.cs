@@ -4,19 +4,13 @@ using UnityEngine;
 
 public class Destroibala : MonoBehaviour
 {
- //Destrói o tiro do player
- void OnTriggerEnter(Collider other) 
- {
-    if (other.tag == "Tiro" )
+
+    //Destrói o tiro do player
+    void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
-    }  
- }
- 
- 
- 
- 
- 
- 
- 
+        if (other.tag == "Tiro")
+        {
+            Destroy(other.gameObject);
+        }
+    }
 }

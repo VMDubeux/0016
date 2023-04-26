@@ -17,6 +17,7 @@ public class Personagem : MonoBehaviour
     public bool moveRight; //Criei variável lógica
     public bool speedUp; //Criei variável lógica
     public Vector2 limitMove;
+    
 
 
      void Start()
@@ -125,6 +126,8 @@ public class Personagem : MonoBehaviour
 
         hpPlayerBar.value = vidaPlayerAtual;
     }
+
+    
     void OnTriggerEnter(Collider other) //Dano do inimigo no player
     {
         if (other.tag == "TiroEnemy")

@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class VidaEnemy : MonoBehaviour
@@ -7,26 +8,39 @@ public class VidaEnemy : MonoBehaviour
     public GameObject multGun;
 
 
-    private void OnTriggerEnter(Collider other) 
+    private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Tiro")
         {
+            Debug.Log(other.name);
             vidaEnemy --;
-        }   
-            if (vidaEnemy == 0 || other.tag == "Player")
-            {
+            
 
+        }   
+        if (vidaEnemy == 0)
+        {
+            
             GameManager.instance.RecordPlus(pointsForGive);
             summonPowerUp();
             Destroy(gameObject);
-            
-            
-            }
-        
+
+
+        }
+
         
     }
 
-    private void summonPowerUp() 
+    private void OnCollisionEnter(Collision collision)
+    {
+      if (collision.gameObject.tag == "Player")
+        {
+            GameManager.instance.RecordPlus(pointsForGive);
+            summonPowerUp();
+            Destroy(gameObject);
+        }
+    }
+
+    private void summonPowerUp()        // Invoca o power up baseado em %
     {
         int porcentagem = Random.Range(0,101);
         if (porcentagem >= 70)
