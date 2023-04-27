@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class VidaEnemy : MonoBehaviour
 {
-    public float vidaEnemy = 3f;
+    public float vidaEnemy;
     public int pointsForGive;
     public GameObject multGun;
 

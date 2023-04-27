@@ -10,20 +10,23 @@ public class SimpleAI : MonoBehaviour
 
     void FixedUpdate()
     {
-        targetPosition = Player.position;
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, EnemySpeed * Time.fixedDeltaTime);
-
-        enemyLook = targetPosition.x - transform.position.x >= 0;
-
-        if (enemyLook == true)
+        if (Player != null)
         {
-            transform.rotation = Quaternion.Euler(-90f, -180f, -90f);
+            targetPosition = Player.position;
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, EnemySpeed * Time.fixedDeltaTime);
 
-        }
+            enemyLook = targetPosition.x - transform.position.x >= 0;
 
-        if (enemyLook == false)
-        {
-            transform.rotation = Quaternion.Euler(-90f, 0f, -90);
+            if (enemyLook == true)
+            {
+                transform.rotation = Quaternion.Euler(-90f, -180f, -90f);
+
+            }
+
+            if (enemyLook == false)
+            {
+                transform.rotation = Quaternion.Euler(-90f, 0f, -90);
+            }
         }
     }
 }

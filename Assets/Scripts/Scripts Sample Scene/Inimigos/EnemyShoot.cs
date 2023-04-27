@@ -9,6 +9,7 @@ public class EnemyShoot : MonoBehaviour
     public GameObject tiroPrefab;
     public float timeToShootEnemy = 0.1f;
     private float timeSinceLastShotEnemy = 0.1f; 
+
     
     
     
