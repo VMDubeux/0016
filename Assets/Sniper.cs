@@ -18,8 +18,8 @@ public class Sniper : MonoBehaviour
         if (player != null)
         {
             transform.LookAt(player.transform, Vector3.forward);
-            sniperShoot = Time.deltaTime;
-            if (sniperCDR >= sniperShoot)
+            sniperShoot += Time.deltaTime;
+            if (sniperShoot >= sniperCDR)
             {
                 SniperShoot();
             }
@@ -32,7 +32,7 @@ public class Sniper : MonoBehaviour
         GameObject tiro = Instantiate(sniperShootPrefab, pontaSniper.position, pontaSniper.rotation);
         Vector3 vector3 = transform.forward * shootingSpeed;
         tiro.GetComponent<Rigidbody>().velocity = vector3;
-        sniperCDR = 0f;
+        sniperShoot = 0f;
 
 
     }

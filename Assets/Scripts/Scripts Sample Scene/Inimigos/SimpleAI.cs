@@ -10,6 +10,11 @@ public class SimpleAI : MonoBehaviour
 
     void FixedUpdate()
     {
+        AIserra();
+    }
+
+    private void AIserra()
+    {
         if (Player != null)
         {
             targetPosition = Player.position;

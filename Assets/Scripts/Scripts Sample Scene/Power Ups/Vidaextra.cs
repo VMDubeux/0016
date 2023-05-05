@@ -9,11 +9,16 @@ public class Vidaextra : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
+        GanharVida(other);
+    }
+
+    private void GanharVida(Collider other)     //Adiciona vida ao player
+    {
         if (other.CompareTag("Player"))
         {
             other.GetComponent<Personagem>().ganharVida(vidaParaDar);
             Destroy(this.gameObject);
         }
     }
+
 }

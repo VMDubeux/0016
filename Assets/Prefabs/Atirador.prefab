@@ -46,9 +46,10 @@ GameObject:
   - component: {fileID: 6292505285623605158}
   - component: {fileID: 6292505285623605160}
   - component: {fileID: 6292505285623605161}
+  - component: {fileID: 3469287838262236360}
   m_Layer: 0
   m_Name: Atirador
-  m_TagString: Untagged
+  m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,3 +176,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5448b64517a0652439916980ab26b98f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3469287838262236360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6598356085060524966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75efd3f093a995e4686f55bab1515f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidaEnemy: 5
+  pointsForGive: 50
+  powerUp:
+  - {fileID: 5734103737165884767, guid: 164b595a1e6c88b41abd22957b7970c7, type: 3}
+  - {fileID: 4980700237159281, guid: 5dca8a5b750db0147bf4c37ab0d2d9c1, type: 3}
