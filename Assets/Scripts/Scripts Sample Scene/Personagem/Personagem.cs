@@ -63,9 +63,9 @@ public class Personagem : MonoBehaviour
             vidaPlayerAtual--;
             hpPlayerBar.value = vidaPlayerAtual;
             GameManager.instance.RecordPlus(-10);
-            if (arma.quantidadeArmas != 1)
+            if (arma.PlayerLasersNumber != 0)
             {
-                arma.quantidadeArmas--;
+                arma.PlayerLasersNumber--;
             }
         }
 

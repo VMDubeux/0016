@@ -1,41 +1,66 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class shoot : MonoBehaviour
 {
+    [Header("Normal Guns: Bullets")]
+    public Transform[] PlayerBulletSpawnPoint;
+    public GameObject PlayerNormalBulletPrefab;
+    public AudioSource PlayerIsAudioSource;
+    public AudioClip PlayerAudioShoot;
+    public float PlayerBulletSpeed;
+    public float PlayerFireRateKeyX = 0.15f;
+    private float _playerNextShoot = 0.0f;
 
-    public GameObject[] pontoDeOrigem; 
-    public GameObject tiroPrefab; 
-    public float timeToShoot;
-    private float timeSinceLastShot = 0f;
-    public float quantidadeArmas;
-    public AudioSource audioSource;
-  
+    [Header("Extra Guns: Laser")]
+    public Transform[] PlayerLasersSpawnPoint;
+    public GameObject PlayerLasersPrefab;
+    public float PlayerLasersNumber = 2.0f;
+    public AudioSource PlayerIsAudioSourceLaser;
+    public AudioClip PlayerAudioShootLaser;
+    public float PlayerLaserSpeed;
+    public float PlayerLaserFireRateKeyX = 0.15f;
+    private float _playerNextLaser = 0.0f;
+
     void Update()
     {
-        Atirar(); 
-    }
+        StartCoroutine(PlayerShootingInputWithKeyZ());
 
-    private void Atirar()     // Faz com que o player atire ao apertar espaço.
-    {
-        timeSinceLastShot += Time.deltaTime;
-
-        if (Input.GetKey(KeyCode.Space) && timeSinceLastShot >= timeToShoot)
+        if (Input.GetKey(KeyCode.X) && Time.time > _playerNextShoot && !Input.GetKeyDown(KeyCode.Z))
         {
-            for (int i = 0; i < quantidadeArmas; i++)
-            {
-                GameObject tiro = Instantiate(tiroPrefab, pontoDeOrigem[i].transform.position, pontoDeOrigem[i].transform.rotation);
-                Vector3 vector3 = transform.up * 500f;
-                tiro.GetComponent<Rigidbody>().velocity = vector3;
-                timeSinceLastShot = 0f;
+            _playerNextShoot = Time.time + PlayerFireRateKeyX;
+            var _playerBullet = Instantiate(PlayerNormalBulletPrefab, PlayerBulletSpawnPoint[1].position, PlayerBulletSpawnPoint[1].rotation);
+            _playerBullet.GetComponent<Rigidbody>().velocity = PlayerBulletSpawnPoint[1].right * PlayerBulletSpeed;
+            PlayerIsAudioSource.PlayOneShot(PlayerAudioShoot);
+        }
 
-                audioSource.Play();
+        if (Input.GetKey(KeyCode.C) && Time.time > _playerNextLaser)
+        {
+            _playerNextLaser = Time.time + PlayerLaserFireRateKeyX;
+            PlayerIsAudioSourceLaser.PlayOneShot(PlayerAudioShootLaser);
+            for (int j = 0; j < PlayerLasersNumber; j++)
+            {
+                var _playerLasers = Instantiate(PlayerLasersPrefab, PlayerLasersSpawnPoint[j].position, PlayerLasersSpawnPoint[j].rotation);
+                _playerLasers.GetComponent<Rigidbody>().velocity = PlayerLasersSpawnPoint[j].right * PlayerLaserSpeed;
             }
         }
-    }  
+    }
 
- 
+    IEnumerator PlayerShootingInputWithKeyZ()
+    {
+        if (Input.GetKeyDown(KeyCode.Z) && !Input.GetKey(KeyCode.X))
+        {
+            PlayerIsAudioSource.PlayOneShot(PlayerAudioShoot);
 
+            yield return new WaitForSecondsRealtime(0.2f);
 
+            for (int i = 0; i < PlayerBulletSpawnPoint.Length; i++)
+            {
+                var _playerBullet = Instantiate(PlayerNormalBulletPrefab, PlayerBulletSpawnPoint[i].position, PlayerBulletSpawnPoint[i].rotation);
+                _playerBullet.GetComponent<Rigidbody>().velocity = PlayerBulletSpawnPoint[i].right * PlayerBulletSpeed;
+            }
+        }
+    }
 }
