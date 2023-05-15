@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1390912654317752978}
   - component: {fileID: 1390912654317752991}
   - component: {fileID: 1227832543}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PowerUp Tiro Especial
   m_TagString: PowerUp
   m_Icon: {fileID: 0}
@@ -141,4 +141,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46aba1d736254694d86ec03805d4b1e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempoDeVida: 5
+  tempoDeVida: 10

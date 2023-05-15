@@ -135,6 +135,7 @@ MonoBehaviour:
   powerUp:
   - {fileID: 5734103737165884767, guid: 164b595a1e6c88b41abd22957b7970c7, type: 3}
   - {fileID: 4980700237159281, guid: 5dca8a5b750db0147bf4c37ab0d2d9c1, type: 3}
+  - {fileID: 2467974911242988844, guid: cf33c34279d1e96438040d7de90a5100, type: 3}
 --- !u!114 &325489993775484561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d89bebd40bd12664a8baa8f537f2634c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: -8679921383154817045, guid: fb2a5d4beb0feb64d8700264ea82d0a8, type: 3}
   sniperShootPrefab: {fileID: 887277544553208524, guid: 4fd29d8693e85fb4e9efe5d1754209b4, type: 3}
   pontaSniper: {fileID: 860208514967953045}
   sniperShoot: 0

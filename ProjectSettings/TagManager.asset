@@ -10,17 +10,18 @@ TagManager:
   - PowerUp
   - Inimigo
   - Music
+  - Bullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - laser
-  - 
-  - 
-  - 
+  - PowerUps
+  - Tiro Enemy
+  - Tiro
   - 
   - 
   - 
@@ -46,4 +47,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 3419947281
     locked: 0

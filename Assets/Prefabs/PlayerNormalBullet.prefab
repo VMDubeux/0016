@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8092088277068616438}
   - component: {fileID: 7974875089514079231}
   - component: {fileID: 1233045095422395870}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerNormalBullet
   m_TagString: Tiro
   m_Icon: {fileID: 0}

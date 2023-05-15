@@ -12,6 +12,10 @@ public class Personagem : MonoBehaviour
     public shoot arma;
     public bool speedUp; //Criei variável lógica
     public Vector2 limitMove;
+
+    public bool escudoAtivo;
+    public float tempoMaximoEscudo;
+    public GameObject escudo;
     
 
 
@@ -58,7 +62,7 @@ public class Personagem : MonoBehaviour
 
     public void PlayerTakeDamage(Collider other)  //Dano do inimigo no player
     {
-        if (other.tag == "TiroEnemy")
+        if (other.tag == "TiroEnemy" && escudoAtivo == false)
         {
             vidaPlayerAtual--;
             hpPlayerBar.value = vidaPlayerAtual;
@@ -76,4 +80,23 @@ public class Personagem : MonoBehaviour
 
         }
     }
+
+    public void PlayerShield()
+    {
+        CancelInvoke("DesactivePlayerShield");
+        tempoMaximoEscudo = 5;
+        escudo.SetActive(true);
+        escudoAtivo = true;
+        Invoke("DesactivePlayerShield", tempoMaximoEscudo);
+        escudo.GetComponent<ParticleSystem>().Play();
+        
+    }
+
+    public void DesactivePlayerShield()
+    {
+
+        escudo.SetActive(false);
+        escudoAtivo = false;
+    }
 }
+
