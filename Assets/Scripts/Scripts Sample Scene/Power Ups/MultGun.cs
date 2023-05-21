@@ -3,7 +3,7 @@ using UnityEngine;
 public class MultGun : MonoBehaviour
 {
     [SerializeField] private float speedPowerUp;
-    private shoot armaPlayer;
+    public shoot armaPlayer;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -21,11 +21,12 @@ public class MultGun : MonoBehaviour
 
             armaPlayer = other.GetComponent<shoot>();
             
-            if (armaPlayer.PlayerLasersNumber < 2) //Condição para o algoritmo aumentar o número de Lasers ativos.
+            if (armaPlayer.PlayerBulletNumber < 5) //Condição para o algoritmo aumentar o número de Lasers ativos.
             {
-                armaPlayer.PlayerLasersNumber++; //Aumenta o número de Lasers ativos, até o máximo de dois.
+                armaPlayer.PlayerBulletNumber++; //Aumenta o número de Lasers ativos, até o máximo de dois.
+                Debug.Log(armaPlayer);
             }
-            Destroy(this.gameObject); //Destrói o PowerUp.
+            Destroy(this.gameObject); //Destrói o PowerUp
         }
     }
 

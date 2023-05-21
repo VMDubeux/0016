@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 public class Personagem : MonoBehaviour
@@ -16,17 +17,17 @@ public class Personagem : MonoBehaviour
     public bool escudoAtivo;
     public float tempoMaximoEscudo;
     public GameObject escudo;
-    
 
 
-     void Start()
-     {
+
+    void Start()
+    {
         vidaPlayerAtual = vidaPlayer;
 
         hpPlayerBar.maxValue = vidaPlayer;
         hpPlayerBar.value = vidaPlayerAtual;
 
-     }
+    }
 
     void Update()
     {
@@ -54,8 +55,8 @@ public class Personagem : MonoBehaviour
         hpPlayerBar.value = vidaPlayerAtual;
     }
 
-    
-    void OnTriggerEnter(Collider other) 
+
+    void OnTriggerEnter(Collider other)
     {
         PlayerTakeDamage(other);
     }
@@ -67,9 +68,10 @@ public class Personagem : MonoBehaviour
             vidaPlayerAtual--;
             hpPlayerBar.value = vidaPlayerAtual;
             GameManager.instance.RecordPlus(-10);
-            if (arma.PlayerLasersNumber != 0)
+
+            if (arma.PlayerBulletNumber > 1)
             {
-                arma.PlayerLasersNumber--;
+                GetComponent<shoot>().PlayerBulletNumber--;
             }
         }
 
@@ -89,7 +91,7 @@ public class Personagem : MonoBehaviour
         escudoAtivo = true;
         Invoke("DesactivePlayerShield", tempoMaximoEscudo);
         escudo.GetComponent<ParticleSystem>().Play();
-        
+
     }
 
     public void DesactivePlayerShield()
