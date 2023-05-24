@@ -34,13 +34,5 @@ public class SamplesSceneTimer : MonoBehaviour
         {
             TimerSlider.value = _timer;
         }
-
-        /*if (GetComponent<PlayerHealth>()._playerHealth <= 0)
-        {
-            GetComponent<GameManager>().LoseMenu.gameObject.SetActive(true);
-            Time.timeScale = 0.0f;
-        }*/ 
-        
-        //Amanhã, implementar relação com vida.
     }
 }

@@ -21,19 +21,27 @@ public class SampleSceneManagerScript : MonoBehaviour
     [Header("GameObject Complementar 3:")]
     public Transform WinMenu;
 
+    private void Start()
+    {
+        Time.timeScale = 1.0f;
+    }
+
     public void RestartGame()
     {
         SceneManager.LoadScene(_CurrentGameScene);
+        Time.timeScale = 1.0f;
     }
 
     public void NextGameScene()
     {
         SceneManager.LoadScene(_NextGameScene);
+        Time.timeScale = 1.0f;
     }
 
     public void ReturnToMainMenu()
     {
         SceneManager.LoadScene(_Menu);
+        Time.timeScale = 1.0f;
     }
 
     public void ResumeGame()

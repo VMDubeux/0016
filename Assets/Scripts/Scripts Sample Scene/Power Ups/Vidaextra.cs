@@ -5,7 +5,7 @@ using UnityEngine;
 public class Vidaextra : MonoBehaviour
 {
    
-    public float vidaParaDar;
+    internal float _vidaParaDar = 15.0f;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,7 +16,7 @@ public class Vidaextra : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<Personagem>().ganharVida(vidaParaDar);
+            other.GetComponent<Personagem>().ganharVida(_vidaParaDar);
             Destroy(this.gameObject);
         }
     }

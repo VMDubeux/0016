@@ -23,14 +23,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2423463369486993756}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0.015, z: -0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2750404583381058628}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
 --- !u!1 &2423463369546982615
 GameObject:
   m_ObjectHideFlags: 0
@@ -5031,14 +5031,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2423463370638144692}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0.015, z: 0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2750404583381058628}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
 --- !u!1 &3269814307897515774
 GameObject:
   m_ObjectHideFlags: 0
@@ -5285,17 +5285,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19dccb5941743714fb30ed7d0fc92e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 150
-  vidaPlayer: 30
-  vidaPlayerAtual: 30
-  canvas: {fileID: 0}
-  hpPlayerBar: {fileID: 0}
   arma: {fileID: 2423463369402116813}
-  speedUp: 0
-  limitMove: {x: 430, y: 280}
-  escudoAtivo: 0
-  tempoMaximoEscudo: 5
   escudo: {fileID: 2423463370049507476}
+  hpPlayerBar: {fileID: 0}
+  canvas: {fileID: 0}
+  CanvasAmmoSpawnPoint:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  AmmoPrefab: {fileID: 874604626726513116, guid: b222f58e0ef478848ae627e75305a50f, type: 3}
 --- !u!114 &2423463369402116813
 MonoBehaviour:
   m_ObjectHideFlags: 0
