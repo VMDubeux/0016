@@ -3,28 +3,40 @@ using UnityEngine.SceneManagement;
 
 public class SampleSceneManagerScript : MonoBehaviour
 {
-    [SerializeField] private string mainMenuScene;
-    [SerializeField] private string gameSceneName;
-    //[SerializeField] private string _writeTheNextGameSceneName; //Escrever o nome da próxima cena no inspector.
+    [Header("Escreva o nome da cena menu:")]
+    [SerializeField] private string _Menu;
 
-    public Transform PauseMenu; //Inserir, no inspector, o GameObject "CanvasPause".
+    [Header("Escreva o nome da cena atual:")]
+    [SerializeField] private string _CurrentGameScene;
+
+    [Header("Escreva o nome da próxima cena:")]
+    [SerializeField] private string _NextGameScene;
+
+    [Header("GameObject Complementar 1:")]
+    public Transform PauseMenu;
+
+    [Header("GameObject Complementar 2:")]
+    public Transform LoseMenu;
+
+    [Header("GameObject Complementar 3:")]
+    public Transform WinMenu;
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(gameSceneName);
+        SceneManager.LoadScene(_CurrentGameScene);
+    }
+
+    public void NextGameScene()
+    {
+        SceneManager.LoadScene(_NextGameScene);
     }
 
     public void ReturnToMainMenu()
     {
-        SceneManager.LoadScene (mainMenuScene);
+        SceneManager.LoadScene(_Menu);
     }
 
-    /*public void NextGameScene() //Método acrescentado. Após vencida a fase, pressionar o botão "avançar".
-    {
-        SceneManager.LoadScene(_writeTheNextGameSceneName);
-    }*/
-
-    public void ResumeGame() //Método acrescentado. Para quando o jogo estiver pausado, pressionar o botão "continuar".
+    public void ResumeGame()
     {
         PauseMenu.gameObject.SetActive(false);
         Time.timeScale = 1.0f;
