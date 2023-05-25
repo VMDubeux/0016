@@ -36,7 +36,6 @@ public class shoot : MonoBehaviour
         StartCoroutine(PlayerShootingInputWithKeyZ());
         Atirar();
     }
-     
 
     public void Atirar()
     {
