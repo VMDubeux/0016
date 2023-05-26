@@ -5,14 +5,14 @@ using UnityEngine;
 public class Vidaextra : MonoBehaviour
 {
    
-    internal float _vidaParaDar = 15.0f;
+    public float _vidaParaDar;
 
     private void OnTriggerEnter(Collider other)
     {
         GanharVida(other);
     }
 
-    private void GanharVida(Collider other)     //Adiciona vida ao player
+    public void GanharVida(Collider other)     //Adiciona vida ao player
     {
         if (other.CompareTag("Player"))
         {

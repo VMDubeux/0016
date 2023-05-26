@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 669668149316398620}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.075, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42,12 +42,9 @@ GameObject:
   - component: {fileID: 4047881937748826485}
   - component: {fileID: 1117786302481307344}
   - component: {fileID: 2911537515139883546}
-  - component: {fileID: 3257684200298933588}
-  - component: {fileID: 325489993775484561}
-  - component: {fileID: 4732968471805195795}
   m_Layer: 0
   m_Name: Inimigo 3
-  m_TagString: Untagged
+  m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 3703972656132735951}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0.7071068, w: 0}
   m_LocalPosition: {x: 102.8, y: 0, z: 16.4}
-  m_LocalScale: {x: 500, y: 500, z: 500}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 860208514967953045}
@@ -118,51 +115,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3257684200298933588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3703972656132735951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75efd3f093a995e4686f55bab1515f87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vidaEnemy: 6
-  pointsForGive: 200
-  powerUp:
-  - {fileID: 5734103737165884767, guid: 164b595a1e6c88b41abd22957b7970c7, type: 3}
-  - {fileID: 4980700237159281, guid: 5dca8a5b750db0147bf4c37ab0d2d9c1, type: 3}
-  - {fileID: 2467974911242988844, guid: cf33c34279d1e96438040d7de90a5100, type: 3}
---- !u!114 &325489993775484561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3703972656132735951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d89bebd40bd12664a8baa8f537f2634c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: -8679921383154817045, guid: fb2a5d4beb0feb64d8700264ea82d0a8, type: 3}
-  sniperShootPrefab: {fileID: 887277544553208524, guid: 4fd29d8693e85fb4e9efe5d1754209b4, type: 3}
-  pontaSniper: {fileID: 860208514967953045}
-  sniperShoot: 0
-  sniperCDR: 0.5
-  shootingSpeed: 100
---- !u!114 &4732968471805195795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3703972656132735951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5448b64517a0652439916980ab26b98f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

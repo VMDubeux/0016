@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Shield : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         PlayerShield(other);
     }
-    private void PlayerShield(Collider other)
+    public void PlayerShield(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+
             other.GetComponent<Personagem>().PlayerShield();
             Destroy(this.gameObject);
         }

@@ -22,8 +22,8 @@ public class Personagem : MonoBehaviour
     public Slider hpPlayerBar;
 
     //HP Internal Variables:
-    internal float vidaPlayer = 30.0f;
-    internal float vidaPlayerAtual = 30.0f;
+    public float vidaPlayer;
+    public float vidaPlayerAtual;
 
     [Header("Complementar GameObject 3:")] //Menu de derrota.
     public Canvas canvas;
@@ -128,7 +128,7 @@ public class Personagem : MonoBehaviour
     {
         if (vidaPlayerAtual + VidaParaReceber <= vidaPlayer)
         {
-            vidaPlayerAtual = VidaParaReceber;
+            vidaPlayerAtual += VidaParaReceber;
         }
         else
         {

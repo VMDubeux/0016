@@ -16,13 +16,13 @@ public class MultGun : MonoBehaviour
             {
                 //if (playerLaserEnable.ActivatePlayerLasers) 
                 //{
-                    //Continuar codificação.
+                //Continuar codificação.
                 //}
             }
 
             personagem = other.GetComponent<Personagem>();
             armaPlayer = other.GetComponent<shoot>();
-            
+
             if (armaPlayer.PlayerBulletNumber < 5 && personagem.canvasAmmoNumber < 5) //Condição para o algoritmo aumentar o número de Lasers ativos.
             {
                 armaPlayer.PlayerBulletNumber++; //Aumenta o número de SpawnBulletsPoints ativos, até o máximo de cinco.
