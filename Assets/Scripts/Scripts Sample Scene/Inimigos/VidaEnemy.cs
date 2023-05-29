@@ -30,7 +30,7 @@ public class VidaEnemy : MonoBehaviour
         }
         if (vidaEnemy == 0)
         {
-            PlayerIsAudioSource.PlayOneShot(AudioClipEnemiesExplosion,1.0f);
+            PlayerIsAudioSource.PlayOneShot(AudioClipEnemiesExplosion,0.35f);
             GameManager.instance.RecordPlus(pointsForGive);
             summonPowerUp();
             Destroy(gameObject);

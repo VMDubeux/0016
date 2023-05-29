@@ -9782,6 +9782,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1688415628813782286, guid: 8a98d5432119a6d4bbb6e52c7ee499f0, type: 3}
+      propertyPath: PlayerIsAudioSource
+      value: 
+      objectReference: {fileID: 543450651835384008}
+    - target: {fileID: 1688415628813782287, guid: 8a98d5432119a6d4bbb6e52c7ee499f0, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 543450651835384004}
     - target: {fileID: 1994844771892432123, guid: 8a98d5432119a6d4bbb6e52c7ee499f0, type: 3}
       propertyPath: m_Name
       value: Serra
