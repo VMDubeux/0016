@@ -39,13 +39,13 @@ public class shoot : MonoBehaviour
 
     public void Atirar()
     {
-       if (Input.GetKey(KeyCode.X) && Time.time > _playerNextShoot && !Input.GetKeyDown(KeyCode.Z))
-       {
+        if (Input.GetKey(KeyCode.X) && Time.time > _playerNextShoot && !Input.GetKeyDown(KeyCode.Z))
+        {
             _playerNextShoot = Time.time + PlayerFireRateKeyX;
             var _playerBullet = Instantiate(PlayerNormalBulletPrefab, PlayerBulletSpawnPoint[0].position, PlayerBulletSpawnPoint[0].rotation);
             _playerBullet.GetComponent<Rigidbody>().velocity = PlayerBulletSpawnPoint[0].right * PlayerBulletSpeed;
             PlayerIsAudioSource.PlayOneShot(PlayerAudioShoot);
-       }
+        }
 
         /*if (Input.GetKey(KeyCode.C) && Time.time > _playerNextLaser)
         {
@@ -57,7 +57,7 @@ public class shoot : MonoBehaviour
                 _playerLasers.GetComponent<Rigidbody>().velocity = PlayerLasersSpawnPoint[j].right * PlayerLaserSpeed;
             }
         }*/
-               
+
     }
 
     IEnumerator PlayerShootingInputWithKeyZ()

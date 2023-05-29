@@ -59,7 +59,7 @@ public class VidaEnemy : MonoBehaviour
         {
             int powerUps = Random.Range(0, powerUp.Length);
             GameObject tirasso = Instantiate(powerUp[powerUps], transform.position, transform.rotation);
-            Vector3 vector3 = tirasso.transform.forward * 100f;
+            Vector3 vector3 = Vector3.left * 100f;
             tirasso.GetComponent<Rigidbody>().velocity = vector3;
         }
     }

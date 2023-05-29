@@ -28,10 +28,8 @@ public class Personagem : MonoBehaviour
     [Header("Complementar GameObject 3:")] //Menu de derrota.
     public Canvas canvas;
 
-    [Header("Complementar GameObject 4:")] //GameObject Canvas contendo as Ammos (1 a 5).
-    public GameObject[] CanvasAmmoSpawnPoint;
-    public GameObject AmmoPrefab;
-    internal float canvasAmmoNumber;
+    public GameObject[] ammoIcons;
+
 
     void Start()
     {
@@ -42,7 +40,6 @@ public class Personagem : MonoBehaviour
         hpPlayerBar.maxValue = vidaPlayer;
         hpPlayerBar.value = vidaPlayerAtual;
 
-        canvasAmmoNumber = 1.0f;
     }
 
     void Update()
@@ -51,44 +48,6 @@ public class Personagem : MonoBehaviour
         LimiteEixoY();
         LimiteEixoX();
 
-        switch (canvasAmmoNumber)
-        {
-            case 1:
-                CanvasAmmoSpawnPoint[0].SetActive(true);
-                CanvasAmmoSpawnPoint[1].SetActive(false);
-                CanvasAmmoSpawnPoint[2].SetActive(false);
-                CanvasAmmoSpawnPoint[3].SetActive(false);
-                CanvasAmmoSpawnPoint[4].SetActive(false);
-                break;
-            case 2:
-                CanvasAmmoSpawnPoint[0].SetActive(true);
-                CanvasAmmoSpawnPoint[1].SetActive(true);
-                CanvasAmmoSpawnPoint[2].SetActive(false);
-                CanvasAmmoSpawnPoint[3].SetActive(false);
-                CanvasAmmoSpawnPoint[4].SetActive(false);
-                break;
-            case 3:
-                CanvasAmmoSpawnPoint[0].SetActive(true);
-                CanvasAmmoSpawnPoint[1].SetActive(true);
-                CanvasAmmoSpawnPoint[2].SetActive(true);
-                CanvasAmmoSpawnPoint[3].SetActive(false);
-                CanvasAmmoSpawnPoint[4].SetActive(false);
-                break;
-            case 4:
-                CanvasAmmoSpawnPoint[0].SetActive(true);
-                CanvasAmmoSpawnPoint[1].SetActive(true);
-                CanvasAmmoSpawnPoint[2].SetActive(true);
-                CanvasAmmoSpawnPoint[3].SetActive(true);
-                CanvasAmmoSpawnPoint[4].SetActive(false);
-                break;
-            case 5:
-                CanvasAmmoSpawnPoint[0].SetActive(true);
-                CanvasAmmoSpawnPoint[1].SetActive(true);
-                CanvasAmmoSpawnPoint[2].SetActive(true);
-                CanvasAmmoSpawnPoint[3].SetActive(true);
-                CanvasAmmoSpawnPoint[4].SetActive(true);
-                break;
-        }
     }
 
     public void MovimentacaoPlayer()
@@ -115,11 +74,11 @@ public class Personagem : MonoBehaviour
     {
         switch (transform.position.x)
         {
-            case > 315:
-                transform.position = new Vector3(315, transform.position.y, transform.position.z);
+            case > 295:
+                transform.position = new Vector3(295, transform.position.y, transform.position.z);
                 break;
-            case < -280:
-                transform.position = new Vector3(-280, transform.position.y, transform.position.z);
+            case < -300:
+                transform.position = new Vector3(-300, transform.position.y, transform.position.z);
                 break;
         }
     }
@@ -151,12 +110,13 @@ public class Personagem : MonoBehaviour
             vidaPlayerAtual--;
             hpPlayerBar.value = vidaPlayerAtual;
             GameManager.instance.RecordPlus(-10);
-
-            if (arma.PlayerBulletNumber > 1 && canvasAmmoNumber > 1)
+            shoot tiro = gameObject.GetComponent<shoot>();
+            if (tiro.PlayerBulletNumber > 1)
             {
-                GetComponent<shoot>().PlayerBulletNumber--;
-                canvasAmmoNumber--;
+                tiro.PlayerBulletNumber--;
+                UpdateAmmoIcons();
             }
+
         }
 
         if (vidaPlayerAtual == 0 || other.tag == "Inimigo")
@@ -181,6 +141,20 @@ public class Personagem : MonoBehaviour
     {
         escudo.SetActive(false);
         _escudoAtivo = false;
+    }
+
+    public void UpdateAmmoIcons()
+    {
+        shoot tiro = gameObject.GetComponent<shoot>();
+        for (int i = 0; i < 5; i++)
+        {
+            ammoIcons[i].SetActive(false);
+        }
+
+        for (int i = 0; i < tiro.PlayerBulletNumber; i++)
+        {
+            ammoIcons[i].SetActive(true);
+        }
     }
 }
 
