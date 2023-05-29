@@ -115,11 +115,11 @@ public class Personagem : MonoBehaviour
     {
         switch (transform.position.x)
         {
-            case > 295:
-                transform.position = new Vector3(295, transform.position.y, transform.position.z);
+            case > 315:
+                transform.position = new Vector3(315, transform.position.y, transform.position.z);
                 break;
-            case < -300:
-                transform.position = new Vector3(-300, transform.position.y, transform.position.z);
+            case < -280:
+                transform.position = new Vector3(-280, transform.position.y, transform.position.z);
                 break;
         }
     }

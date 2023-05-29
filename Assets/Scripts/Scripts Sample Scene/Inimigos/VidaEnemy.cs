@@ -5,12 +5,20 @@ public class VidaEnemy : MonoBehaviour
 {
     public float vidaEnemy;
     public int pointsForGive;
+
+    [Header("Complementar GameObject 1:")]
     public GameObject[] powerUp;
 
+    [Header("Complementars Audio Explosion GameObjects 2:")]
+    public GameObject Explosion;
+    public AudioClip AudioClipEnemiesExplosion;
+
+    [Header("Complementar Audio Source GameObject 3:")]
+    public AudioSource PlayerIsAudioSource;
 
     private void OnTriggerEnter(Collider other)
     {
-        EnemyTakeDamage(other);        
+        EnemyTakeDamage(other);
     }
 
     private void EnemyTakeDamage(Collider other)  //Inimigo tomando dano do player
@@ -19,17 +27,14 @@ public class VidaEnemy : MonoBehaviour
         {
             Debug.Log(other.name);
             vidaEnemy--;
-
-
         }
         if (vidaEnemy == 0)
         {
-
+            PlayerIsAudioSource.PlayOneShot(AudioClipEnemiesExplosion,1.0f);
             GameManager.instance.RecordPlus(pointsForGive);
             summonPowerUp();
             Destroy(gameObject);
-
-
+            ExplodeEnemyShip();
         }
     }
 
@@ -49,7 +54,7 @@ public class VidaEnemy : MonoBehaviour
     }
     private void summonPowerUp()        // Invoca o power up baseado em %
     {
-        int porcentagem = Random.Range(0,101);
+        int porcentagem = Random.Range(0, 101);
         if (porcentagem >= 10)
         {
             int powerUps = Random.Range(0, powerUp.Length);
@@ -59,7 +64,9 @@ public class VidaEnemy : MonoBehaviour
         }
     }
 
-        
-
-
+    void ExplodeEnemyShip()
+    {
+        GameObject ExplosionFX = Instantiate(Explosion, transform.position, transform.rotation);
+        Destroy(ExplosionFX, 0.75f);
+    }
 }
