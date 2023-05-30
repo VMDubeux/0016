@@ -77,8 +77,8 @@ public class Personagem : MonoBehaviour
             case > 295:
                 transform.position = new Vector3(295, transform.position.y, transform.position.z);
                 break;
-            case < -300:
-                transform.position = new Vector3(-300, transform.position.y, transform.position.z);
+            case < -289:
+                transform.position = new Vector3(-289, transform.position.y, transform.position.z);
                 break;
         }
     }

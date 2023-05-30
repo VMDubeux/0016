@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    public float totalTime = 4f; // tempo total em segundos
-    private float currentTime = 0f; // tempo atual em segundos
-    private bool isRunning = false; // indicador se o timer está rodando
+    /*public float totalTime; // tempo total em segundos
+    private float currentTime; // tempo atual em segundos
+    private bool isRunning; // indicador se o timer está rodando
 
   
     private void Start()
@@ -42,5 +42,18 @@ public class Timer : MonoBehaviour
     public void StopTimer()
     {
         isRunning = false;
+    }*/
+    private void Update()
+    {
+
+        if (transform.position.x < -320)
+        {
+            Destroy(gameObject);
+        }
+        else if (transform.position.x > 315) 
+        { 
+            Destroy(gameObject); 
+        }
+        
     }
 }
