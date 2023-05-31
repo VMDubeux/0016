@@ -324,13 +324,7 @@ MonoBehaviour:
   vidaPlayer: 30
   vidaPlayerAtual: 30
   canvas: {fileID: 0}
-  CanvasAmmoSpawnPoint:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  AmmoPrefab: {fileID: 874604626726513116, guid: b222f58e0ef478848ae627e75305a50f, type: 3}
+  ammoIcons: []
 --- !u!114 &6149137181777202502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,37 +443,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &2166800237675829972
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2166800237675829973}
-  m_Layer: 0
-  m_Name: MEIO DA NAVE
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2166800237675829973
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2166800237675829972}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.1852, z: 0.02}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1844430941153500836}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2166800238461564146
 GameObject:
   m_ObjectHideFlags: 0
@@ -5519,3 +5482,65 @@ Transform:
   m_Father: {fileID: 1844430941153500836}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
+--- !u!1001 &3662551571910241039
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1844430941153500836}
+    m_Modifications:
+    - target: {fileID: 3225134140922032602, guid: 3a5e994395c6d5b458c84fdb1b3b7748, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225134140922032602, guid: 3a5e994395c6d5b458c84fdb1b3b7748, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225134140922032602, guid: 3a5e994395c6d5b458c84fdb1b3b7748, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1852
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225134140922032602, guid: 3a5e994395c6d5b458c84fdb1b3b7748, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225134140922032602, guid: 3a5e994395c6d5b458c84fdb1b3b7748, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225134140922032602, guid: 3a5e994395c6d5b458c84fdb1b3b7748, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225134140922032602, guid: 3a5e994395c6d5b458c84fdb1b3b7748, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225134140922032602, guid: 3a5e994395c6d5b458c84fdb1b3b7748, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225134140922032602, guid: 3a5e994395c6d5b458c84fdb1b3b7748, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225134140922032602, guid: 3a5e994395c6d5b458c84fdb1b3b7748, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225134140922032602, guid: 3a5e994395c6d5b458c84fdb1b3b7748, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225134140922032603, guid: 3a5e994395c6d5b458c84fdb1b3b7748, type: 3}
+      propertyPath: m_Name
+      value: MEIO DA NAVE
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3a5e994395c6d5b458c84fdb1b3b7748, type: 3}
+--- !u!4 &2166800237675829973 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3225134140922032602, guid: 3a5e994395c6d5b458c84fdb1b3b7748, type: 3}
+  m_PrefabInstance: {fileID: 3662551571910241039}
+  m_PrefabAsset: {fileID: 0}

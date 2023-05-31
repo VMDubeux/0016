@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyGenerator : MonoBehaviour
+public class AsteroidsGenerator : MonoBehaviour
 {
     [Header("Main GameObject:")]
-    public GameObject[] Enemy;
-    
+    public GameObject[] Asteroids;
+
     //Private Variables:
     //Spawn Time:
     private sbyte _spawnDelay = 2;
@@ -24,9 +24,9 @@ public class EnemyGenerator : MonoBehaviour
 
     void SpawnEnemies()
     {
-        int _naveIndex = Random.Range(0, Enemy.Length);
+        int _AsteroidsIndex = Random.Range(0, Asteroids.Length);
         Vector3 _naveStartPos = new Vector3(300, Random.Range(-130, 105), 11);
-        GameObject _nave = Instantiate(Enemy[_naveIndex], _naveStartPos, Enemy[_naveIndex].transform.rotation);
+        GameObject _nave = Instantiate(Asteroids[_AsteroidsIndex], _naveStartPos, Asteroids[_AsteroidsIndex].transform.rotation);
         _nave.tag = "Inimigo";
     }
 }

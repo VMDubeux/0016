@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &980883617743524115
+--- !u!1 &3215327455779663369
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 980883617743524122}
+  - component: {fileID: 3215327455779663360}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -16,28 +16,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &980883617743524122
+--- !u!4 &3215327455779663360
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 980883617743524115}
+  m_GameObject: {fileID: 3215327455779663369}
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: 11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 726897072169440918}
+  - {fileID: 3104557066962512268}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -90}
---- !u!1001 &1409284881730488370
+--- !u!1001 &3642609588685715240
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 980883617743524122}
+    m_TransformParent: {fileID: 3215327455779663360}
     m_Modifications:
     - target: {fileID: 1356547242772775966, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
       propertyPath: m_Name
@@ -87,10 +87,62 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
+      propertyPath: hpPlayerBar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
+      propertyPath: ammoIcons.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
+      propertyPath: ammoIcons.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
+      propertyPath: ammoIcons.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
+      propertyPath: ammoIcons.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
+      propertyPath: ammoIcons.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
+      propertyPath: ammoIcons.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
+      propertyPath: CanvasAmmoSpawnPoint.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
+      propertyPath: CanvasAmmoSpawnPoint.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
+      propertyPath: CanvasAmmoSpawnPoint.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
+      propertyPath: CanvasAmmoSpawnPoint.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
+      propertyPath: CanvasAmmoSpawnPoint.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
---- !u!4 &726897072169440918 stripped
+--- !u!4 &3104557066962512268 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1844430941153500836, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
-  m_PrefabInstance: {fileID: 1409284881730488370}
+  m_PrefabInstance: {fileID: 3642609588685715240}
   m_PrefabAsset: {fileID: 0}

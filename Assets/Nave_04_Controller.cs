@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sniper : MonoBehaviour
+public class Nave_04_Controller : MonoBehaviour
 {
     Transform Player;
     public GameObject sniperShootPrefab;
@@ -10,18 +10,20 @@ public class Sniper : MonoBehaviour
     public float sniperShoot;
     public float sniperCDR;
     public float shootingSpeed;
-    private Vector3 _startPos;
+    private Vector3 Rot = new Vector3(-105,20,170f);
 
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").transform;
+        Debug.Log($"Este é o player: {Player.transform}");
+        Debug.Log($"Este é o transform position: {transform.rotation}");
     }
 
     void Update()
     {
-        transform.LookAt(Player);
+        transform.LookAt(Player, Rot);
         sniperShoot += Time.deltaTime;
-        
+
         if (sniperShoot >= sniperCDR)
         {
             SniperShoot();
@@ -31,7 +33,7 @@ public class Sniper : MonoBehaviour
     private void SniperShoot()
     {
         GameObject tiro = Instantiate(sniperShootPrefab, pontaSniper.position, pontaSniper.rotation);
-        Vector3 vector3 = transform.forward * shootingSpeed;
+        Vector3 vector3 = transform.right * shootingSpeed;
         tiro.GetComponent<Rigidbody>().velocity = vector3;
         sniperShoot = 0f;
     }
