@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8412004058178361308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8412004058178361311}
+  - component: {fileID: 8412004058178361301}
+  - component: {fileID: 8412004058178361306}
+  - component: {fileID: 8412004058178361307}
+  - component: {fileID: 8412004058178361304}
+  - component: {fileID: 8412004058178361305}
+  - component: {fileID: 8412004058178361310}
+  m_Layer: 0
+  m_Name: Nave 04 (sniper)
+  m_TagString: Inimigo
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8412004058178361311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412004058178361308}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 225.7, y: 79.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8412004058178361301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412004058178361308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75efd3f093a995e4686f55bab1515f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidaEnemy: 7
+  pointsForGive: 250
+  powerUp:
+  - {fileID: 4980700237159281, guid: 5dca8a5b750db0147bf4c37ab0d2d9c1, type: 3}
+  - {fileID: 5734103737165884767, guid: 164b595a1e6c88b41abd22957b7970c7, type: 3}
+  - {fileID: 2467974911242988844, guid: cf33c34279d1e96438040d7de90a5100, type: 3}
+  Explosion: {fileID: 418656276211360997, guid: 7dec23e4bc89b39469353539ac22e314, type: 3}
+  AudioClipEnemiesExplosion: {fileID: 8300000, guid: 8121087c297d31f4f9d20f8556528288, type: 3}
+  PlayerIsAudioSource: {fileID: 6149137181777202504, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
+--- !u!114 &8412004058178361306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412004058178361308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c4d367b397bbfc42a6094ac5dac322c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SerraPrefab: {fileID: 0}
+  Player: {fileID: 0}
+  EnemySpeed: 50
+--- !u!114 &8412004058178361307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412004058178361308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ef33b347643f043ba576d014b46df8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sniperShootPrefab: {fileID: 5892998567449712463, guid: b4a9c90662afbc24a90e543f3193bbbe, type: 3}
+  pontaSniper: {fileID: 0}
+  sniperShoot: 0
+  sniperCDR: 0.5
+  shootingSpeed: 400
+--- !u!114 &8412004058178361304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412004058178361308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5448b64517a0652439916980ab26b98f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &8412004058178361305
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412004058178361308}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &8412004058178361310
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412004058178361308}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 43.670944, y: 34.02399, z: 25.72}
+  m_Center: {x: 1.8954697, y: 2.2730045, z: 0}

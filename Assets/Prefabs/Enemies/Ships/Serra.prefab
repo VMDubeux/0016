@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 1198418156331310898}
   - component: {fileID: 9052866525245689091}
   - component: {fileID: 9052866525245689088}
-  - component: {fileID: 9052866525245689092}
   - component: {fileID: 9052866525245689093}
   - component: {fileID: 9052866525245689090}
   - component: {fileID: 7695608542691448110}
+  - component: {fileID: 2086471703}
   m_Layer: 0
   m_Name: Serra
   m_TagString: Inimigo
@@ -118,21 +118,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.031978376, y: 0.17627473, z: 0.17598833}
   m_Center: {x: 0.0000005075488, y: 0.0009553876, z: -0.0007356358}
---- !u!114 &9052866525245689092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8914690907766328064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c4d367b397bbfc42a6094ac5dac322c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SerraPrefab: {fileID: 8914690907766328064}
-  Player: {fileID: 3225134140922032602, guid: 3a5e994395c6d5b458c84fdb1b3b7748, type: 3}
-  EnemySpeed: 50
 --- !u!114 &9052866525245689093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,3 +167,17 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &2086471703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8914690907766328064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c4d367b397bbfc42a6094ac5dac322c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  EnemySpeed: 150

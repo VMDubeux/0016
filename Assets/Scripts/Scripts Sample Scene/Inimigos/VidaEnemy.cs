@@ -4,6 +4,7 @@ using UnityEngine;
 public class VidaEnemy : MonoBehaviour
 {
     public float vidaEnemy;
+    private bool _FoiDestruido = false;
     public int pointsForGive;
 
     [Header("Complementar GameObject 1:")]
@@ -30,11 +31,13 @@ public class VidaEnemy : MonoBehaviour
         }
         if (vidaEnemy == 0)
         {
+
             PlayerIsAudioSource.PlayOneShot(AudioClipEnemiesExplosion,0.35f);
-            GameManager.instance.RecordPlus(pointsForGive);
             summonPowerUp();
             Destroy(gameObject);
+            GameManager.instance.RecordPlus(pointsForGive);
             ExplodeEnemyShip();
+            
         }
     }
 
@@ -55,7 +58,7 @@ public class VidaEnemy : MonoBehaviour
     private void summonPowerUp()        // Invoca o power up baseado em %
     {
         int porcentagem = Random.Range(0, 101);
-        if (porcentagem >= 10)
+        if (porcentagem >= 60)
         {
             int powerUps = Random.Range(0, powerUp.Length);
             GameObject tirasso = Instantiate(powerUp[powerUps], transform.position, transform.rotation);

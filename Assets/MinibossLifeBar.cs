@@ -45,7 +45,7 @@ public class MinibossLifeBar : MonoBehaviour
             vidaMinibossAtual--;
             hpMinibossBar.value = vidaMinibossAtual;
 
-            if (vidaMiniboss == 0 || other.tag == "Player")
+            if (vidaMinibossAtual == 0 || other.tag == "Player")
             {
                 PlayerIsAudioSource.PlayOneShot(AudioClipEnemiesExplosion, 0.35f);
                 GameManager.instance.RecordPlus(pointsForGive);

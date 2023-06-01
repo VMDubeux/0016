@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9089348451712403797}
   - component: {fileID: 2579710799221349272}
   - component: {fileID: -1548362796414834969}
-  - component: {fileID: -4794253991915697220}
+  - component: {fileID: 7295660385535190043}
   m_Layer: 0
   m_Name: Aste3
   m_TagString: Inimigo
@@ -143,7 +143,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.011812336, y: 0.013004512, z: 0.013794588}
   m_Center: {x: -0.00035432493, y: 0.00021463612, z: 0.00025826113}
---- !u!114 &-4794253991915697220
+--- !u!114 &7295660385535190043
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,12 +152,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 9219252893902084835}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75efd3f093a995e4686f55bab1515f87, type: 3}
+  m_Script: {fileID: 11500000, guid: 4940612437120c9448bbde0cf7a58226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaEnemy: 2
-  pointsForGive: 10
-  powerUp: []
-  Explosion: {fileID: 418656276211360997, guid: 7dec23e4bc89b39469353539ac22e314, type: 3}
-  AudioClipEnemiesExplosion: {fileID: 8300000, guid: 8121087c297d31f4f9d20f8556528288, type: 3}
-  PlayerIsAudioSource: {fileID: 6149137181777202504, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
+  vidaAsteroid: 4
+  pointsForGive: 15

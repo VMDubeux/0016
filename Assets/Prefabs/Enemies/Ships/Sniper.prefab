@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 535270476945806557}
   - component: {fileID: 535270476945806546}
   - component: {fileID: 7809661699314453793}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sniper
   m_TagString: Inimigo
   m_Icon: {fileID: 0}
@@ -50,11 +50,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d89bebd40bd12664a8baa8f537f2634c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1356547242772775966, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
   sniperShootPrefab: {fileID: 6902646215494671166, guid: fbde3e83e559e1343bcf81c5a2e0a05d, type: 3}
   pontaSniper: {fileID: 5529145691787466508}
   sniperShoot: 0
-  sniperCDR: 0.5
+  sniperCDR: 2
   shootingSpeed: 200
 --- !u!114 &535270476945806556
 MonoBehaviour:
@@ -221,9 +220,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 535270476945806547}
     m_Modifications:
+    - target: {fileID: 669668149316398620, guid: 156718303251efb46b53fe2277c92de7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3703972656132735951, guid: 156718303251efb46b53fe2277c92de7, type: 3}
       propertyPath: m_Name
       value: Inimigo 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703972656132735951, guid: 156718303251efb46b53fe2277c92de7, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4047881937748826485, guid: 156718303251efb46b53fe2277c92de7, type: 3}
       propertyPath: m_RootOrder

@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75efd3f093a995e4686f55bab1515f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaEnemy: 6
+  vidaEnemy: 2
   pointsForGive: 50
   powerUp:
   - {fileID: 5734103737165884767, guid: 164b595a1e6c88b41abd22957b7970c7, type: 3}
