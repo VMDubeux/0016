@@ -10,7 +10,7 @@ public class EnemyGenerator : MonoBehaviour
     //Private Variables:
     //Spawn Time:
     private sbyte _spawnDelay = 1;
-    private float _spawnRepeatTime = 1.0f;
+    private float _spawnRepeatTime = 1.5f;
 
     void Start()
     {

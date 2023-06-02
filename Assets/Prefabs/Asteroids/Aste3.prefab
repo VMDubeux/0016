@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4833864954064523260}
   - component: {fileID: 7273772828659890998}
   - component: {fileID: 531183279425451754}
-  - component: {fileID: 9089348451712403797}
   - component: {fileID: 2579710799221349272}
   - component: {fileID: -1548362796414834969}
   - component: {fileID: 7295660385535190043}
@@ -100,20 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cbf55d3ae37ba045bbe0aed8a5f1f65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 20
---- !u!114 &9089348451712403797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9219252893902084835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cbf55d3ae37ba045bbe0aed8a5f1f65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 10
+  _speed: 75
 --- !u!54 &2579710799221349272
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -157,3 +143,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaAsteroid: 4
   pointsForGive: 15
+  Explosion: {fileID: 418656276211360997, guid: 7dec23e4bc89b39469353539ac22e314, type: 3}
+  AudioClipEnemiesExplosion: {fileID: 8300000, guid: 8121087c297d31f4f9d20f8556528288, type: 3}
+  PlayerIsAudioSource: {fileID: 6149137181777202504, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}

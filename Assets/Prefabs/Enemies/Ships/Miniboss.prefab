@@ -198,8 +198,8 @@ MonoBehaviour:
   AudioClipEnemiesExplosion: {fileID: 8300000, guid: 8121087c297d31f4f9d20f8556528288, type: 3}
   PlayerIsAudioSource: {fileID: 6149137181777202504, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
   hpMinibossBar: {fileID: 848572568541325871}
-  vidaMiniboss: 250
-  vidaMinibossAtual: 250
+  vidaMiniboss: 50
+  vidaMinibossAtual: 50
   pointsForGive: 1000
 --- !u!54 &2256169729955899295
 Rigidbody:

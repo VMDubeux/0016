@@ -12,8 +12,8 @@ public class EnemyGeneratorSniper : MonoBehaviour
     //Transform:
     Transform Player;
     //Spawn Time:
-    private float _spawnDelay = 3.0f;
-    private float _spawnRepeatTime = 20.0f;
+    private float _spawnDelay = 1.5f;
+    private float _spawnRepeatTime = 3.5f;
 
     void Start()
     {

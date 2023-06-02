@@ -92,8 +92,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
+      propertyPath: vidaPlayer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
       propertyPath: hpPlayerBar
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
+      propertyPath: vidaPlayerAtual
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
       propertyPath: ammoIcons.Array.size

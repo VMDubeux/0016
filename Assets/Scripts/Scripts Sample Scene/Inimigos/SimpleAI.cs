@@ -10,7 +10,11 @@ public class SimpleAI : MonoBehaviour
     public float EnemySpeed = 0.1f;
     private Vector3 targetPosition;
 
+    private void Start()
+    {
+        Player.transform.position = GameObject.Find("Nave do player").transform.position;
 
+    }
     void FixedUpdate()
     {
         AIserra();

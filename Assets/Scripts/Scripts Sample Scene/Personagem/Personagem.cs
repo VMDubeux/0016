@@ -119,7 +119,7 @@ public class Personagem : MonoBehaviour
 
         }
 
-        if (vidaPlayerAtual == 0 || other.tag == "Inimigo")
+        if (vidaPlayerAtual <= 0 || other.tag == "Inimigo")
         {
             Destroy(gameObject);
             Time.timeScale = 0.0f;

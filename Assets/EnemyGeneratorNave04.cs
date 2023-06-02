@@ -11,8 +11,8 @@ public class EnemyGeneratorNave04 : MonoBehaviour
     //Transform:
     Transform Player;
     //Spawn Time:
-    private float _spawnDelay = 3.0f;
-    private float _spawnRepeatTime = 35.0f;
+    private float _spawnDelay = 1.5f;
+    private float _spawnRepeatTime = 3.5f;
 
     void Start()
     {

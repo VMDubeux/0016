@@ -8,13 +8,17 @@ public class GameManager : MonoBehaviour
     public Text textoPontuacaoAtual;
     public Text HighScoreText;
 
-    void Start()
-    {
-        textoPontuacaoAtual.text = $"PONTUAÇÃO: {pontuacao}";
-    }
+
     void Awake()
     {
         instance = this; 
+    }
+
+    void Start()
+    {
+        textoPontuacaoAtual.text = $"PONTUAÇÃO: {pontuacao}";
+
+        //DontDestroyOnLoad(this.gameObject);
     }
 
     public void RecordPlus(int pointsForWin)

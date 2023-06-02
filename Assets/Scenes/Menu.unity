@@ -2525,7 +2525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dd88ed6738fdce45b9621155e50684e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameScene: SampleScene
+  gameScene: Fase1
   mainMenu: {fileID: 1594928124}
   optionsMenu: {fileID: 288609703}
   creditsMenu: {fileID: 1496283099}
