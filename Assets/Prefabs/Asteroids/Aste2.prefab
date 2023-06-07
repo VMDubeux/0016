@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -7137770803680215714}
   - component: {fileID: -4184723887421774466}
   - component: {fileID: -507813098017843038}
+  - component: {fileID: 4129261093697340641}
   m_Layer: 0
   m_Name: Aste2
   m_TagString: Inimigo
@@ -146,3 +147,15 @@ MonoBehaviour:
   Explosion: {fileID: 418656276211360997, guid: 7dec23e4bc89b39469353539ac22e314, type: 3}
   AudioClipEnemiesExplosion: {fileID: 8300000, guid: 8121087c297d31f4f9d20f8556528288, type: 3}
   PlayerIsAudioSource: {fileID: 6149137181777202504, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
+--- !u!114 &4129261093697340641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8341112235487387393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5448b64517a0652439916980ab26b98f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
