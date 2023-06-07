@@ -22,8 +22,8 @@ public class Personagem : MonoBehaviour
     public Slider hpPlayerBar;
 
     //HP Internal Variables:
-    public float vidaPlayer;
-    public float vidaPlayerAtual;
+    public int vidaPlayer;
+    public int vidaPlayerAtual;
 
     [Header("Complementar GameObject 3:")] //Menu de derrota.
     public Canvas canvas;
@@ -83,7 +83,7 @@ public class Personagem : MonoBehaviour
         }
     }
 
-    public void ganharVida(float VidaParaReceber) //Recebendo vida
+    public void ganharVida(int VidaParaReceber) //Recebendo vida
     {
         if (vidaPlayerAtual + VidaParaReceber <= vidaPlayer)
         {
@@ -105,6 +105,9 @@ public class Personagem : MonoBehaviour
 
     public void PlayerTakeDamage(Collider other)  //Dano do inimigo no player
     {
+        VidaEnemy boom = GetComponent<VidaEnemy>();
+
+
         if (other.tag == "TiroEnemy" && _escudoAtivo == false)
         {
             vidaPlayerAtual--;
@@ -119,7 +122,21 @@ public class Personagem : MonoBehaviour
 
         }
 
-        if (vidaPlayerAtual <= 0 || other.tag == "Inimigo")
+        if (other.tag == "Inimigo" && _escudoAtivo == true)
+        {
+            Destroy(other.gameObject);
+
+        }
+        else if (other.tag == "Inimigo" && _escudoAtivo == false)
+        {
+            vidaPlayerAtual = vidaPlayerAtual / 2;
+            hpPlayerBar.value = vidaPlayerAtual;
+            Destroy(other.gameObject);
+            GameManager.instance.RecordPlus(-100);
+        }
+
+
+        if (vidaPlayerAtual <= 0 /*|| other.tag == "Inimigo*/)
         {
             Destroy(gameObject);
             Time.timeScale = 0.0f;

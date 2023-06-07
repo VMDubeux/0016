@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Vidaextra : MonoBehaviour
 {
-   
-    public float _vidaParaDar;
+
+    public int _vidaParaDar;
 
     private void OnTriggerEnter(Collider other)
     {

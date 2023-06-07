@@ -6,11 +6,11 @@ public class EnemyGenerator : MonoBehaviour
 {
     [Header("Main GameObject:")]
     public GameObject[] Enemy;
-    
+
     //Private Variables:
     //Spawn Time:
-    private sbyte _spawnDelay = 1;
-    private float _spawnRepeatTime = 1.5f;
+    private sbyte _spawnDelay = 2;
+    private float _spawnRepeatTime = 3f;
 
     void Start()
     {
@@ -19,7 +19,7 @@ public class EnemyGenerator : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     void SpawnEnemies()

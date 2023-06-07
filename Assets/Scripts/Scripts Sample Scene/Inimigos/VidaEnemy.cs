@@ -17,12 +17,12 @@ public class VidaEnemy : MonoBehaviour
     [Header("Complementar Audio Source GameObject 3:")]
     public AudioSource PlayerIsAudioSource;
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         EnemyTakeDamage(other);
     }
 
-    private void EnemyTakeDamage(Collider other)  //Inimigo tomando dano do player
+    public void EnemyTakeDamage(Collider other)  //Inimigo tomando dano do player
     {
         if (other.tag == "Tiro")
         {
@@ -32,21 +32,21 @@ public class VidaEnemy : MonoBehaviour
         if (vidaEnemy == 0)
         {
 
-            PlayerIsAudioSource.PlayOneShot(AudioClipEnemiesExplosion,0.35f);
+            PlayerIsAudioSource.PlayOneShot(AudioClipEnemiesExplosion, 0.35f);
             summonPowerUp();
             Destroy(gameObject);
             GameManager.instance.RecordPlus(pointsForGive);
             ExplodeEnemyShip();
-            
+
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         PlayerGetPowerUp(collision);
     }
 
-    private void PlayerGetPowerUp(Collision collision)      //Power up colide com o "Player"
+    public void PlayerGetPowerUp(Collision collision)      //Power up colide com o "Player"
     {
         if (collision.gameObject.tag == "Player")
         {
@@ -55,7 +55,7 @@ public class VidaEnemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void summonPowerUp()        // Invoca o power up baseado em %
+    public void summonPowerUp()        // Invoca o power up baseado em %
     {
         int porcentagem = Random.Range(0, 101);
         if (porcentagem >= 60)
@@ -67,7 +67,7 @@ public class VidaEnemy : MonoBehaviour
         }
     }
 
-    void ExplodeEnemyShip()
+    public void ExplodeEnemyShip()
     {
         GameObject ExplosionFX = Instantiate(Explosion, transform.position, transform.rotation);
         Destroy(ExplosionFX, 0.75f);
