@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
     public Slider MusicSlider, SfxSlider;
+    public AudioMixer AudioMixer;
 
     public void ToggleMusic()
     {
