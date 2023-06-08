@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 9219252893902084835}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 11}
-  m_LocalScale: {x: 733.37634, y: 733.37634, z: 733.37634}
+  m_LocalScale: {x: 750, y: 750, z: 750}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4940612437120c9448bbde0cf7a58226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaAsteroid: 4
+  vidaAsteroid: 2
   pointsForGive: 15
   Explosion: {fileID: 418656276211360997, guid: 7dec23e4bc89b39469353539ac22e314, type: 3}
   AudioClipEnemiesExplosion: {fileID: 8300000, guid: 8121087c297d31f4f9d20f8556528288, type: 3}

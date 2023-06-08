@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveLeft : MonoBehaviour
 {
     [SerializeField] private float _speed = 10.0f;
-    private float _leftBound = -295f;
+    private float _leftBound = -370f;
 
     void Start()
     {
@@ -16,6 +16,6 @@ public class MoveLeft : MonoBehaviour
     {
         transform.Translate(Vector3.left * _speed * Time.deltaTime, Space.World); // Move to the left
 
-        if (transform.position.x < _leftBound && !gameObject.CompareTag("Inimigo")) Destroy(gameObject);// If object goes off screen that is NOT the background, destroy it
+        if (transform.position.x < _leftBound && gameObject.CompareTag("Inimigo")) Destroy(gameObject);// If object goes off screen that is NOT the background, destroy it
     }
 }

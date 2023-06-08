@@ -13,7 +13,6 @@ public class AsteroidLife : MonoBehaviour
 
     public AudioSource PlayerIsAudioSource;
 
-    // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Tiro"))
