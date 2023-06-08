@@ -30,9 +30,14 @@ public class Personagem : MonoBehaviour
 
     public GameObject[] ammoIcons;
 
+    public GameObject Score;
+    private Text ScoreText;
+
 
     void Start()
     {
+        PlayerPrefs.SetString("CurrentScore", "0");
+
         transform.position = Vector3.zero;
         transform.position = new Vector3(-232.5f, 0, 11);
 
@@ -138,6 +143,7 @@ public class Personagem : MonoBehaviour
 
         if (vidaPlayerAtual <= 0 /*|| other.tag == "Inimigo*/)
         {
+            PlayerPrefs.SetString("CurrentScore", ScoreText.text);
             Destroy(gameObject);
             Time.timeScale = 0.0f;
             canvas.gameObject.SetActive(true);

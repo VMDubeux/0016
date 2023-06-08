@@ -11,6 +11,8 @@ TagManager:
   - Inimigo
   - Music
   - Bullet
+  - Score
+  - HighScore
   layers:
   - Default
   - TransparentFX

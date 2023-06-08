@@ -4,41 +4,53 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public int pontuacao;
-    public Text textoPontuacaoAtual;
-    public Text HighScoreText;
 
+    internal GameObject CurrentScore;
+    internal GameObject HighScore;
+
+    private Text CurrentScoreText;
+    private Text HighScoreText;
+
+    internal int Current = 0;
+    internal int High = 0;
 
     void Awake()
     {
-        instance = this; 
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        } else Destroy(gameObject);
     }
 
     void Start()
     {
-        textoPontuacaoAtual.text = $"PONTUA플O: {pontuacao}";
+        CurrentScore = GameObject.FindGameObjectWithTag("Score");
+        HighScore = GameObject.FindGameObjectWithTag("HighScore");
 
-        //DontDestroyOnLoad(this.gameObject);
+        CurrentScoreText = CurrentScore.GetComponent<Text>();
+        HighScoreText = HighScore.GetComponent<Text>();
+
+        CurrentScoreText.text = PlayerPrefs.GetString("CurrentScore");
+
+        Current = System.Convert.ToInt32(PlayerPrefs.GetString("CurrentScore"));
+        High = System.Convert.ToInt32(PlayerPrefs.GetString("HighScore"));
+
+        HighScoreText.text = PlayerPrefs.GetString("HighScore");
     }
 
     public void RecordPlus(int pointsForWin)
     {
-        pontuacao += pointsForWin;
-        textoPontuacaoAtual.text = $"PONTUA플O: {pontuacao}";
+        Current += pointsForWin;
+        CurrentScoreText.text = $"{Current}";
         CheckHighScore();
     }
 
     void CheckHighScore()
     {
-        if (pontuacao > PlayerPrefs.GetInt("MELHOR PONTUA플O", 0))
+        if (Current > High)
         {
-            PlayerPrefs.SetInt("MELHOR PONTUA플O", pontuacao);
-            UpdateHighScoreText();
+            PlayerPrefs.SetString("HighScore", System.Convert.ToString(Current));
         }
-    }
-
-    void UpdateHighScoreText()
-    {
-        HighScoreText.text = $"MELHOR PONTUA플O: {PlayerPrefs.GetInt("MELHOR PONTUA플O", 0)}";
     }
 }

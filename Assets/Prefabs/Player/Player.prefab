@@ -93,7 +93,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
       propertyPath: vidaPlayer
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
       propertyPath: hpPlayerBar
@@ -101,7 +101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
       propertyPath: vidaPlayerAtual
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
       propertyPath: ammoIcons.Array.size
@@ -146,6 +146,10 @@ PrefabInstance:
     - target: {fileID: 6149137181777202503, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
       propertyPath: CanvasAmmoSpawnPoint.Array.data[4]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149137181777202504, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}
