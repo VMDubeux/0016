@@ -42,7 +42,7 @@ public class Personagem : MonoBehaviour
         transform.position = new Vector3(-232.5f, 0, 11);
 
         vidaPlayerAtual = vidaPlayer;
-        hpPlayerBar.maxValue = vidaPlayer;
+        hpPlayerBar.maxValue = vidaPlayer;  
         hpPlayerBar.value = vidaPlayerAtual;
 
     }
@@ -143,7 +143,7 @@ public class Personagem : MonoBehaviour
 
         if (vidaPlayerAtual <= 0 /*|| other.tag == "Inimigo*/)
         {
-            PlayerPrefs.SetString("CurrentScore", ScoreText.text);
+            //PlayerPrefs.SetString("CurrentScore", ScoreText.text);
             Destroy(gameObject);
             Time.timeScale = 0.0f;
             canvas.gameObject.SetActive(true);

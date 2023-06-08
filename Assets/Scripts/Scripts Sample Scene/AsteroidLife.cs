@@ -13,21 +13,39 @@ public class AsteroidLife : MonoBehaviour
 
     public AudioSource PlayerIsAudioSource;
 
+    public GameObject[] powerUp;
+
+
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Tiro"))
+        if (other.CompareTag("Tiro"))
         {
+
             vidaAsteroid--;
-            if(vidaAsteroid == 0)
+            if (vidaAsteroid == 0)
             {
                 PlayerIsAudioSource.PlayOneShot(AudioClipEnemiesExplosion, 0.35f);
                 Destroy(gameObject);
                 GameManager.instance.RecordPlus(pointsForGive);
+                summonPowerUp();
                 ExplodeEnemyShip();
             }
-                
+
         }
-        
+
+    }
+    private void summonPowerUp()        // Invoca o power up baseado em %
+    {
+        int porcentagem = Random.Range(0, 101);
+        if (porcentagem >= 10)
+        {
+            int powerUps = Random.Range(0, powerUp.Length);
+            GameObject tirasso = Instantiate(powerUp[powerUps], transform.position, transform.rotation);
+            Vector3 vector3 = Vector3.left * 100f;
+            tirasso.GetComponent<Rigidbody>().velocity = vector3;
+
+
+        }
     }
     void ExplodeEnemyShip()
     {
@@ -35,3 +53,4 @@ public class AsteroidLife : MonoBehaviour
         Destroy(ExplosionFX, 0.75f);
     }
 }
+

@@ -16,6 +16,7 @@ public class shoot : MonoBehaviour
     public float PlayerFireRateKeyX = 0.15f;
     private float _playerNextShoot = 0.0f;
 
+    private AudioManager audioManager;
     /* 
      public Transform[] PlayerLasersSpawnPoint;
      public GameObject PlayerLasersPrefab;
@@ -26,9 +27,15 @@ public class shoot : MonoBehaviour
      public float PlayerLaserFireRateKeyX = 0.15f;
      private float _playerNextLaser = 0.0f;*/
 
+    private void Awake()
+    {
+
+    }
+
     private void Start()
     {
         PlayerBulletNumber = 1.0f;
+       // audioManager = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioManager>();
     }
 
     void Update()
@@ -44,7 +51,7 @@ public class shoot : MonoBehaviour
             _playerNextShoot = Time.time + PlayerFireRateKeyX;
             var _playerBullet = Instantiate(PlayerNormalBulletPrefab, PlayerBulletSpawnPoint[0].position, PlayerBulletSpawnPoint[0].rotation);
             _playerBullet.GetComponent<Rigidbody>().velocity = PlayerBulletSpawnPoint[0].right * PlayerBulletSpeed;
-            PlayerIsAudioSource.PlayOneShot(PlayerAudioShoot);
+            audioManager.PlaySFX("Shoot");
         }
 
         /*if (Input.GetKey(KeyCode.C) && Time.time > _playerNextLaser)
@@ -64,7 +71,7 @@ public class shoot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z) && !Input.GetKey(KeyCode.X))
         {
-            PlayerIsAudioSource.PlayOneShot(PlayerAudioShoot);
+            //audioManager.PlaySFX("Shoot");
 
             yield return new WaitForSecondsRealtime(0.2f);
 

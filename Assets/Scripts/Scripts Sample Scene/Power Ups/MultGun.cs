@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class MultGun : MonoBehaviour
 {
-    [SerializeField] private float speedPowerUp;
+    //private float speedPowerUp;
     private shoot armaPlayer;
     private Personagem personagem;
+
 
     private void OnTriggerEnter(Collider other)
     {

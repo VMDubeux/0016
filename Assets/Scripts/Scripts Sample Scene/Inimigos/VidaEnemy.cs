@@ -7,7 +7,9 @@ public class VidaEnemy : MonoBehaviour
     private bool _FoiDestruido = false;
     public int pointsForGive;
 
-    [Header("Complementar GameObject 1:")]
+    private AudioManager audioManager;
+
+   [Header("Complementar GameObject 1:")]
     public GameObject[] powerUp;
 
     [Header("Complementars Audio Explosion GameObjects 2:")]
@@ -17,6 +19,11 @@ public class VidaEnemy : MonoBehaviour
     [Header("Complementar Audio Source GameObject 3:")]
     public AudioSource PlayerIsAudioSource;
 
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioManager>();
+    }
     public void OnTriggerEnter(Collider other)
     {
         EnemyTakeDamage(other);
@@ -32,7 +39,7 @@ public class VidaEnemy : MonoBehaviour
         if (vidaEnemy == 0)
         {
 
-            PlayerIsAudioSource.PlayOneShot(AudioClipEnemiesExplosion, 0.35f);
+            audioManager.PlaySFX("Explosion");
             summonPowerUp();
             Destroy(gameObject);
             GameManager.instance.RecordPlus(pointsForGive);
@@ -48,7 +55,7 @@ public class VidaEnemy : MonoBehaviour
 
     public void PlayerGetPowerUp(Collision collision)      //Power up colide com o "Player"
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && gameObject.tag != "Boss")
         {
             GameManager.instance.RecordPlus(pointsForGive);
             summonPowerUp();
@@ -71,5 +78,6 @@ public class VidaEnemy : MonoBehaviour
     {
         GameObject ExplosionFX = Instantiate(Explosion, transform.position, transform.rotation);
         Destroy(ExplosionFX, 0.75f);
+
     }
 }

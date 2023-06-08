@@ -13139,6 +13139,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 0c7f37019a1a0a44aaa1c0c95c3ec07d, type: 2}
     - target: {fileID: 7483638637908802159, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
+      propertyPath: Score
+      value: 
+      objectReference: {fileID: 1654868673}
+    - target: {fileID: 7483638637908802159, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1410342504}
@@ -13149,7 +13153,7 @@ PrefabInstance:
     - target: {fileID: 7483638637908802159, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
       propertyPath: hpPlayerBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 165733736}
     - target: {fileID: 7483638637908802159, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
       propertyPath: vidaPlayerAtual
       value: 5
@@ -13157,23 +13161,23 @@ PrefabInstance:
     - target: {fileID: 7483638637908802159, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
       propertyPath: ammoIcons.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 813199229}
     - target: {fileID: 7483638637908802159, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
       propertyPath: ammoIcons.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1840486262}
     - target: {fileID: 7483638637908802159, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
       propertyPath: ammoIcons.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1028719799}
     - target: {fileID: 7483638637908802159, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
       propertyPath: ammoIcons.Array.data[3]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 966515912}
     - target: {fileID: 7483638637908802159, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
       propertyPath: ammoIcons.Array.data[4]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 495453134}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
 --- !u!1001 &3374275840162765308
