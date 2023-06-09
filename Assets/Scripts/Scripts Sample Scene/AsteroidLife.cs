@@ -8,6 +8,8 @@ public class AsteroidLife : MonoBehaviour
     public float vidaAsteroid;
     public int pointsForGive;
 
+    private AudioManager audioManager;
+
     public GameObject Explosion;
     public AudioClip AudioClipEnemiesExplosion;
 
@@ -16,6 +18,10 @@ public class AsteroidLife : MonoBehaviour
     public GameObject[] powerUp;
 
 
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioManager>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Tiro"))
@@ -24,7 +30,8 @@ public class AsteroidLife : MonoBehaviour
             vidaAsteroid--;
             if (vidaAsteroid == 0)
             {
-                PlayerIsAudioSource.PlayOneShot(AudioClipEnemiesExplosion, 0.35f);
+                //PlayerIsAudioSource.PlayOneShot(AudioClipEnemiesExplosion, 0.35f);
+                audioManager.PlaySFX("Explosion");
                 Destroy(gameObject);
                 GameManager.instance.RecordPlus(pointsForGive);
                 summonPowerUp();

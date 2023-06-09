@@ -29,13 +29,13 @@ public class shoot : MonoBehaviour
 
     private void Awake()
     {
-
+        audioManager = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioManager>();
     }
 
     private void Start()
     {
         PlayerBulletNumber = 1.0f;
-       // audioManager = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioManager>();
+
     }
 
     void Update()
@@ -71,7 +71,7 @@ public class shoot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z) && !Input.GetKey(KeyCode.X))
         {
-            //audioManager.PlaySFX("Shoot");
+            audioManager.PlaySFX("Shoot");
 
             yield return new WaitForSecondsRealtime(0.2f);
 

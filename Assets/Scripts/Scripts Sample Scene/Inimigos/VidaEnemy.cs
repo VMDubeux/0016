@@ -39,10 +39,10 @@ public class VidaEnemy : MonoBehaviour
         if (vidaEnemy == 0)
         {
 
-            audioManager.PlaySFX("Explosion");
             summonPowerUp();
             Destroy(gameObject);
             GameManager.instance.RecordPlus(pointsForGive);
+            audioManager.PlaySFX("Explosion");
             ExplodeEnemyShip();
 
         }
