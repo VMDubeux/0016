@@ -44,7 +44,7 @@ public class AsteroidLife : MonoBehaviour
     private void summonPowerUp()        // Invoca o power up baseado em %
     {
         int porcentagem = Random.Range(0, 101);
-        if (porcentagem >= 10)
+        if (porcentagem >= 90)
         {
             int powerUps = Random.Range(0, powerUp.Length);
             GameObject tirasso = Instantiate(powerUp[powerUps], transform.position, transform.rotation);
