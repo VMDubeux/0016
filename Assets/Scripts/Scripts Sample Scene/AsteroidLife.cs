@@ -30,8 +30,7 @@ public class AsteroidLife : MonoBehaviour
             vidaAsteroid--;
             if (vidaAsteroid == 0)
             {
-                //PlayerIsAudioSource.PlayOneShot(AudioClipEnemiesExplosion, 0.35f);
-                audioManager.PlaySFX("Explosion");
+                audioManager.PlaySFX("Explosion", 0.15f);
                 Destroy(gameObject);
                 GameManager.instance.RecordPlus(pointsForGive);
                 summonPowerUp();

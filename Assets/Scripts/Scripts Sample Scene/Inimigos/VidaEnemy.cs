@@ -42,7 +42,7 @@ public class VidaEnemy : MonoBehaviour
             summonPowerUp();
             Destroy(gameObject);
             GameManager.instance.RecordPlus(pointsForGive);
-            audioManager.PlaySFX("Explosion");
+            audioManager.PlaySFX("Explosion", 0.15f);
             ExplodeEnemyShip();
 
         }

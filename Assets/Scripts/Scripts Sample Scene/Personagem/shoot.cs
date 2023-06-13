@@ -51,7 +51,7 @@ public class shoot : MonoBehaviour
             _playerNextShoot = Time.time + PlayerFireRateKeyX;
             var _playerBullet = Instantiate(PlayerNormalBulletPrefab, PlayerBulletSpawnPoint[0].position, PlayerBulletSpawnPoint[0].rotation);
             _playerBullet.GetComponent<Rigidbody>().velocity = PlayerBulletSpawnPoint[0].right * PlayerBulletSpeed;
-            audioManager.PlaySFX("Shoot");
+            audioManager.PlaySFX("Shoot", 0.65f);
         }
 
         /*if (Input.GetKey(KeyCode.C) && Time.time > _playerNextLaser)
@@ -71,7 +71,7 @@ public class shoot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z) && !Input.GetKey(KeyCode.X))
         {
-            audioManager.PlaySFX("Shoot");
+            audioManager.PlaySFX("Shoot", 0.65f);
 
             yield return new WaitForSecondsRealtime(0.2f);
 
