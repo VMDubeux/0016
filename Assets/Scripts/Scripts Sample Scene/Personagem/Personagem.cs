@@ -33,6 +33,8 @@ public class Personagem : MonoBehaviour
     public GameObject Score;
     private Text ScoreText;
 
+    //Rigidbody Private Variable:
+    private Rigidbody rbPlayer;
 
     void Start()
     {
@@ -45,6 +47,7 @@ public class Personagem : MonoBehaviour
         hpPlayerBar.maxValue = vidaPlayer;  
         hpPlayerBar.value = vidaPlayerAtual;
 
+        rbPlayer = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -52,7 +55,6 @@ public class Personagem : MonoBehaviour
         MovimentacaoPlayer();
         LimiteEixoY();
         LimiteEixoX();
-
     }
 
     public void MovimentacaoPlayer()
@@ -81,6 +83,7 @@ public class Personagem : MonoBehaviour
         {
             case > 295:
                 transform.position = new Vector3(295, transform.position.y, transform.position.z);
+                rbPlayer.AddForce(Vector3.left * 5.0f, ForceMode.VelocityChange);
                 break;
             case < -289:
                 transform.position = new Vector3(-289, transform.position.y, transform.position.z);
@@ -141,9 +144,8 @@ public class Personagem : MonoBehaviour
         }
 
 
-        if (vidaPlayerAtual <= 0 /*|| other.tag == "Inimigo*/)
+        if (vidaPlayerAtual <= 0)
         {
-            //PlayerPrefs.SetString("CurrentScore", ScoreText.text);
             Destroy(gameObject);
             Time.timeScale = 0.0f;
             canvas.gameObject.SetActive(true);

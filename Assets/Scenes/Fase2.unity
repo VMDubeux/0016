@@ -906,9 +906,9 @@ MonoBehaviour:
   _Menu: Menu
   _CurrentGameScene: Fase2
   _NextGameScene: Fase3
-  PauseMenu: {fileID: 0}
-  LoseMenu: {fileID: 0}
-  WinMenu: {fileID: 0}
+  PauseMenu: {fileID: 1283331565}
+  LoseMenu: {fileID: 1627924905}
+  WinMenu: {fileID: 1941809131}
 --- !u!4 &364253374
 Transform:
   m_ObjectHideFlags: 0
@@ -949,7 +949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7981d9cdd5f95f4c8e4f7fd447de06c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseCanvasMenu: {fileID: 0}
+  PauseCanvasMenu: {fileID: 1283331561}
 --- !u!1 &383626156
 GameObject:
   m_ObjectHideFlags: 0
@@ -10592,7 +10592,7 @@ PrefabInstance:
     - target: {fileID: 7483638637908802159, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
       propertyPath: canvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1627924904}
     - target: {fileID: 7483638637908802159, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
       propertyPath: vidaPlayer
       value: 5

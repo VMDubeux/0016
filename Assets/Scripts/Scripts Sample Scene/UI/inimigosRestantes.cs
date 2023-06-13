@@ -6,13 +6,8 @@ using UnityEngine.SceneManagement;
 public class inimigosRestantes : MonoBehaviour
 {
     [SerializeField] private string gameSceneRespawn;
-    public GameObject enemies;
+    public GameObject []enemies;
     private int enemiesCount;
-
-    private SampleSceneManagerScript GetSampleSceneManagerScript()
-    {
-        return enemies.GetComponent<SampleSceneManagerScript>();
-    }
 
     void sceneManager(SampleSceneManagerScript uIcontroller)
     {
