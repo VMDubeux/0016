@@ -68,8 +68,8 @@ public class VidaEnemy : MonoBehaviour
         if (porcentagem >= 60)
         {
             int powerUps = Random.Range(0, powerUp.Length);
-            GameObject tirasso = Instantiate(powerUp[powerUps], transform.position, transform.rotation);
-            Vector3 vector3 = Vector3.left * 100f;
+            GameObject tirasso = Instantiate(powerUp[powerUps], transform.position, powerUp[powerUps].transform.rotation);
+            Vector3 vector3 = (Vector3.left * 100f);
             tirasso.GetComponent<Rigidbody>().velocity = vector3;
         }
     }
