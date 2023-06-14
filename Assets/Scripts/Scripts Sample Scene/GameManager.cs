@@ -37,26 +37,22 @@ public class GameManager : MonoBehaviour
         HighScoreText = HighScore.GetComponent<Text>();
 
         CurrentScoreText.text = PlayerPrefs.GetString("CurrentScore");
-        //DefinitiveScoreText.text = PlayerPrefs.GetString("DefinitiveScore"); //Desnecessário
 
         Current = System.Convert.ToInt32(PlayerPrefs.GetString("CurrentScore"));
-        //Definitive = System.Convert.ToInt32(PlayerPrefs.GetString("DefinitiveScore")); //Desnecessário
         High = System.Convert.ToInt32(PlayerPrefs.GetString("HighScore"));
 
         HighScoreText.text = PlayerPrefs.GetString("HighScore");
-        //CurrentScoreText.text = $"{Current}"; //Desnecessário
     }
 
     void Update()
     {
-        CurrentScoreText.text = $"{Current}"; //Necessário para atualizar ao mudar de fase!
+        CurrentScoreText.text = $"{Current}";
         CheckHighScore();
     }
 
     public void RecordPlus(int pointsForWin)
     {
         Current += pointsForWin;
-        //CurrentScoreText.text = $"{Current}"; //Desnecessário
         DefinitiveScoreText.text = $"{Definitive}";
     }
 
