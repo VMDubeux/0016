@@ -28,18 +28,21 @@ public class SampleSceneManagerScript : MonoBehaviour
 
     public void RestartGame()
     {
+        GameManager.instance.Current = GameManager.instance.Definitive;
         SceneManager.LoadScene(_CurrentGameScene);
         Time.timeScale = 1.0f;
     }
 
     public void NextGameScene()
     {
+        GameManager.instance.Definitive = GameManager.instance.Current;
         SceneManager.LoadScene(_NextGameScene);
         Time.timeScale = 1.0f;
     }
 
     public void ReturnToMainMenu()
     {
+        PlayerPrefs.SetString("CurrentScore", System.Convert.ToString(0));
         SceneManager.LoadScene(_Menu);
         Time.timeScale = 1.0f;
     }
