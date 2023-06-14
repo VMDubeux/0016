@@ -25,7 +25,7 @@ public class AsteroidsGenerator : MonoBehaviour
     void SpawnEnemies()
     {
         int _AsteroidsIndex = Random.Range(0, Asteroids.Length);
-        Vector3 _naveStartPos = new Vector3(300, Random.Range(-130, 105), 11);
+        Vector3 _naveStartPos = new Vector3(300, Random.Range(-165, 150), 11);
         GameObject _nave = Instantiate(Asteroids[_AsteroidsIndex], _naveStartPos, Asteroids[_AsteroidsIndex].transform.rotation);
         _nave.tag = "Inimigo";
     }

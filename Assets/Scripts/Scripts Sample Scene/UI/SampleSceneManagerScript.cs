@@ -42,7 +42,8 @@ public class SampleSceneManagerScript : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
-        PlayerPrefs.SetString("CurrentScore", System.Convert.ToString(0));
+        GameManager.instance.Current = 0;
+        GameManager.instance.Definitive = 0;
         SceneManager.LoadScene(_Menu);
         Time.timeScale = 1.0f;
     }

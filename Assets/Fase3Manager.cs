@@ -53,18 +53,22 @@ public class Fase3Manager : MonoBehaviour
 
     public void RestartGame()
     {
+        GameManager.instance.Current = GameManager.instance.Definitive;
         SceneManager.LoadScene(_CurrentGameScene);
         Time.timeScale = 1.0f;
     }
 
     public void NextGameScene()
     {
+        GameManager.instance.Definitive = GameManager.instance.Current;
         SceneManager.LoadScene(_NextGameScene);
         Time.timeScale = 1.0f;
     }
 
     public void ReturnToMainMenu()
     {
+        GameManager.instance.Current = 0;
+        GameManager.instance.Definitive = 0;
         SceneManager.LoadScene(_Menu);
         Time.timeScale = 1.0f;
     }

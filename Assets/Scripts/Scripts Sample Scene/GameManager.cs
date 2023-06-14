@@ -9,8 +9,8 @@ public class GameManager : MonoBehaviour
     internal GameObject DefinitiveScore;
     internal GameObject HighScore;
 
-    private Text CurrentScoreText;
-    private Text DefinitiveScoreText;
+    internal Text CurrentScoreText;
+    internal Text DefinitiveScoreText;
     private Text HighScoreText;
 
     internal int Current = 0;
@@ -37,21 +37,27 @@ public class GameManager : MonoBehaviour
         HighScoreText = HighScore.GetComponent<Text>();
 
         CurrentScoreText.text = PlayerPrefs.GetString("CurrentScore");
-        DefinitiveScoreText.text = PlayerPrefs.GetString("DefinitiveScore");
+        //DefinitiveScoreText.text = PlayerPrefs.GetString("DefinitiveScore"); //Desnecessário
 
         Current = System.Convert.ToInt32(PlayerPrefs.GetString("CurrentScore"));
-        Definitive = System.Convert.ToInt32(PlayerPrefs.GetString("DefinitiveScore"));
+        //Definitive = System.Convert.ToInt32(PlayerPrefs.GetString("DefinitiveScore")); //Desnecessário
         High = System.Convert.ToInt32(PlayerPrefs.GetString("HighScore"));
 
         HighScoreText.text = PlayerPrefs.GetString("HighScore");
+        //CurrentScoreText.text = $"{Current}"; //Desnecessário
+    }
+
+    void Update()
+    {
+        CurrentScoreText.text = $"{Current}"; //Necessário para atualizar ao mudar de fase!
+        CheckHighScore();
     }
 
     public void RecordPlus(int pointsForWin)
     {
         Current += pointsForWin;
-        CurrentScoreText.text = $"{Current}";
+        //CurrentScoreText.text = $"{Current}"; //Desnecessário
         DefinitiveScoreText.text = $"{Definitive}";
-        CheckHighScore();
     }
 
     void CheckHighScore()
