@@ -8,6 +8,8 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
 
+    public static UIController Controller;
+
     [Header("AudioClips:")]
     public Sound[] MusicSounds, SfxSounds;
 
@@ -29,7 +31,11 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        MusicVolume(PlayerPrefs.GetFloat("MusicVolumeValue"));
         PlayMusic("Theme");
+        SFXVolume(PlayerPrefs.GetFloat("SfxVolumeValue"));
+        ToggleMusic();
+        ToggleSFX();
     }
 
     public void PlayMusic(string Name)
@@ -62,12 +68,12 @@ public class AudioManager : MonoBehaviour
 
     public void ToggleMusic()
     {
-        MusicSource.mute = !MusicSource.mute;
+        PlayerPrefs.GetInt("musicToggleValue");
     }
 
     public void ToggleSFX()
     {
-        SfxSource.mute = !SfxSource.mute;
+        PlayerPrefs.GetInt("sfxToggleValue");
     }
 
     public void MusicVolume(float volume)
