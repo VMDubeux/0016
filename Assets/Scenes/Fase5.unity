@@ -3831,40 +3831,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298214595}
   m_CullTransparentMesh: 1
---- !u!1 &1326735493
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1326735495}
-  m_Layer: 0
-  m_Name: Inimigos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1326735495
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1326735493}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2256169729955899291}
-  - {fileID: 535270476319116016}
-  - {fileID: 535270477353515263}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1328215185
 GameObject:
   m_ObjectHideFlags: 0
@@ -11003,7 +10969,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6191463262033595182}
   - component: {fileID: 908357552215191513}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: LifeBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11034,7 +11000,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 530754193528387512}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ponta da arma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11048,14 +11014,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 535270476319116019}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: 258.25, y: 62, z: 11}
-  m_LocalScale: {x: 300, y: 300, z: 300}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 0.041750003, y: 0.062000003, z: 0}
+  m_LocalScale: {x: 0.30000007, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9180478496363138767}
-  m_Father: {fileID: 1326735495}
-  m_RootOrder: 1
+  m_Father: {fileID: 2256169729955899291}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: -180, z: 0}
 --- !u!54 &535270476319116017
 Rigidbody:
@@ -11088,9 +11054,9 @@ GameObject:
   - component: {fileID: 535270476319116030}
   - component: {fileID: 535270476319116017}
   - component: {fileID: 7809661698604143362}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Sniper
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11236,9 +11202,9 @@ GameObject:
   - component: {fileID: 535270477353515249}
   - component: {fileID: 535270477353515262}
   - component: {fileID: 7809661699722551565}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Sniper (1)
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11266,14 +11232,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 535270477353515260}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: 257.25, y: -70.75, z: 11}
-  m_LocalScale: {x: 300, y: 300, z: 300}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 0.04275, y: -0.070750006, z: 0}
+  m_LocalScale: {x: 0.30000007, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9180478495250185408}
-  m_Father: {fileID: 1326735495}
-  m_RootOrder: 2
+  m_Father: {fileID: 2256169729955899291}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -90, y: -180, z: 0}
 --- !u!82 &543450651835384008 stripped
 AudioSource:
@@ -11388,7 +11354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919614791933790707, guid: 57ce98fb107eb7c498d2576316720f94, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57ce98fb107eb7c498d2576316720f94, type: 3}
@@ -11454,7 +11420,7 @@ GameObject:
   - component: {fileID: 1734475515648877142}
   - component: {fileID: 1734475515648877140}
   - component: {fileID: 2945457506854217791}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -11512,15 +11478,17 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442373193123953953}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 300, y: 0, z: 11}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 296, y: 0, z: 11}
   m_LocalScale: {x: 1000, y: 1000, z: 1000}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8260969033337375335}
   - {fileID: 530754193528387512}
-  m_Father: {fileID: 1326735495}
-  m_RootOrder: 0
+  - {fileID: 535270476319116016}
+  - {fileID: 535270477353515263}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &2945457506854217790
 MeshFilter:
@@ -11724,7 +11692,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 216214734807941875}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11742,7 +11710,7 @@ GameObject:
   - component: {fileID: 15824567783208335}
   - component: {fileID: 7253390749645743277}
   - component: {fileID: 9185817935350474222}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11834,7 +11802,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5529145691381480224}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Ponta da bazooka
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11850,7 +11818,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5529145692427454767}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Ponta da bazooka
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12343,7 +12311,7 @@ GameObject:
   - component: {fileID: 6367044413960515873}
   - component: {fileID: 9213056726565285339}
   - component: {fileID: 5161656362507265484}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12471,7 +12439,7 @@ GameObject:
   - component: {fileID: 9180478495250185408}
   - component: {fileID: 5244519936078967653}
   - component: {fileID: 8010971702167078831}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Inimigo 3
   m_TagString: Inimigo
   m_Icon: {fileID: 0}
@@ -12489,7 +12457,7 @@ GameObject:
   - component: {fileID: 9180478496363138767}
   - component: {fileID: 5244519934978507114}
   - component: {fileID: 8010971703281300896}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Inimigo 3
   m_TagString: Inimigo
   m_Icon: {fileID: 0}
@@ -12508,7 +12476,7 @@ GameObject:
   - component: {fileID: 6801298970689940857}
   - component: {fileID: 316529596774073817}
   - component: {fileID: 5895109737433738698}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Canvas_Miniboss_LifeBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -40,16 +40,16 @@ public class MinibossLifeBar : MonoBehaviour
 
     public void PlayerTakeDamage(Collider other)  //Dano do inimigo no player
     {
-        if (other.tag == "Tiro")
+        if (other.CompareTag("Tiro"))
         {
             vidaMinibossAtual--;
             hpMinibossBar.value = vidaMinibossAtual;
 
-            if (vidaMinibossAtual == 0 || other.tag == "Player")
+            if (vidaMinibossAtual == 0 || other.CompareTag("Player"))
             {
                 PlayerIsAudioSource.PlayOneShot(AudioClipEnemiesExplosion, 0.35f);
                 GameManager.instance.RecordPlus(pointsForGive);
-                summonPowerUp();
+                SummonPowerUp();
                 Destroy(gameObject);
                 ExplodeEnemyShip();
             }
@@ -63,17 +63,17 @@ public class MinibossLifeBar : MonoBehaviour
 
         private void PlayerGetPowerUp(Collision collision)      //Power up colide com o "Player"
         {
-            if (collision.gameObject.tag == "Player")
+            if (collision.gameObject.CompareTag("Player"))
             {
                 GameManager.instance.RecordPlus(pointsForGive);
-                summonPowerUp();
+                SummonPowerUp();
                 Destroy(gameObject);
             }
         }
-        private void summonPowerUp()        // Invoca o power up baseado em %
+        private void SummonPowerUp()        // Invoca o power up baseado em %
         {
             int porcentagem = Random.Range(0, 101);
-            if (porcentagem >= 10)
+            if (porcentagem >= 1)
             {
                 int powerUps = Random.Range(0, powerUp.Length);
                 GameObject tirasso = Instantiate(powerUp[powerUps], transform.position, transform.rotation);

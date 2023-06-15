@@ -4,7 +4,6 @@ using UnityEngine;
 public class VidaEnemy : MonoBehaviour
 {
     public float vidaEnemy;
-    private bool _FoiDestruido = false;
     public int pointsForGive;
 
     private AudioManager audioManager;
@@ -31,7 +30,7 @@ public class VidaEnemy : MonoBehaviour
 
     public void EnemyTakeDamage(Collider other)  //Inimigo tomando dano do player
     {
-        if (other.tag == "Tiro")
+        if (other.CompareTag("Tiro"))
         {
             Debug.Log(other.name);
             vidaEnemy--;
@@ -39,7 +38,7 @@ public class VidaEnemy : MonoBehaviour
         if (vidaEnemy == 0)
         {
 
-            summonPowerUp();
+            SummonPowerUp();
             Destroy(gameObject);
             GameManager.instance.RecordPlus(pointsForGive);
             audioManager.PlaySFX("Explosion", 0.15f);
@@ -55,14 +54,14 @@ public class VidaEnemy : MonoBehaviour
 
     public void PlayerGetPowerUp(Collision collision)      //Power up colide com o "Player"
     {
-        if (collision.gameObject.tag == "Player" && gameObject.tag != "Boss")
+        if (collision.gameObject.CompareTag("Player") && !gameObject.CompareTag("Boss"))
         {
             GameManager.instance.RecordPlus(pointsForGive);
-            summonPowerUp();
+            SummonPowerUp();
             Destroy(gameObject);
         }
     }
-    public void summonPowerUp()        // Invoca o power up baseado em %
+    public void SummonPowerUp()        // Invoca o power up baseado em %
     {
         int porcentagem = Random.Range(0, 101);
         if (porcentagem >= 60)

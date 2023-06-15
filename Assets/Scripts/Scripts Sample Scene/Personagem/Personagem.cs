@@ -7,8 +7,7 @@ public class Personagem : MonoBehaviour
     public shoot arma;
 
     //Movement Private Variables:
-    private float moveSpeed = 150.0f;
-    private Vector3 limitMove;
+    private readonly float moveSpeed = 150.0f;
 
     [Header("Complementar GameObject 1:")]
     public GameObject escudo;
@@ -31,10 +30,6 @@ public class Personagem : MonoBehaviour
     public GameObject[] ammoIcons;
 
     public GameObject Score;
-    private Text ScoreText;
-
-    //Rigidbody Private Variable:
-    private Rigidbody rbPlayer;
 
     void Start()
     {
@@ -44,10 +39,8 @@ public class Personagem : MonoBehaviour
         transform.position = new Vector3(-232.5f, 0, 11);
 
         vidaPlayerAtual = vidaPlayer;
-        hpPlayerBar.maxValue = vidaPlayer;  
+        hpPlayerBar.maxValue = vidaPlayer;
         hpPlayerBar.value = vidaPlayerAtual;
-
-        rbPlayer = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -61,7 +54,7 @@ public class Personagem : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        transform.position += new Vector3(horizontal, vertical, 0) * moveSpeed * Time.deltaTime;
+        transform.position += moveSpeed * Time.deltaTime * new Vector3(horizontal, vertical, 0).normalized;
     }
 
     private void LimiteEixoY()
@@ -83,7 +76,6 @@ public class Personagem : MonoBehaviour
         {
             case > 295:
                 transform.position = new Vector3(295, transform.position.y, transform.position.z);
-                rbPlayer.AddForce(Vector3.left * 5.0f, ForceMode.VelocityChange);
                 break;
             case < -289:
                 transform.position = new Vector3(-289, transform.position.y, transform.position.z);
@@ -91,7 +83,7 @@ public class Personagem : MonoBehaviour
         }
     }
 
-    public void ganharVida(int VidaParaReceber) //Recebendo vida
+    public void GanharVida(int VidaParaReceber) //Recebendo vida
     {
         if (vidaPlayerAtual + VidaParaReceber <= vidaPlayer)
         {
@@ -113,10 +105,7 @@ public class Personagem : MonoBehaviour
 
     public void PlayerTakeDamage(Collider other)  //Dano do inimigo no player
     {
-        VidaEnemy boom = GetComponent<VidaEnemy>();
-
-
-        if (other.tag == "TiroEnemy" && _escudoAtivo == false)
+        if (other.CompareTag("TiroEnemy") && _escudoAtivo == false)
         {
             vidaPlayerAtual--;
             hpPlayerBar.value = vidaPlayerAtual;
@@ -127,22 +116,20 @@ public class Personagem : MonoBehaviour
                 tiro.PlayerBulletNumber--;
                 UpdateAmmoIcons();
             }
-
         }
 
-        if (other.tag == "Inimigo" && _escudoAtivo == true)
+        if ((other.CompareTag("Inimigo") || other.CompareTag("Boss")) && _escudoAtivo == true)
         {
             Destroy(other.gameObject);
 
         }
-        else if (other.tag == "Inimigo" && _escudoAtivo == false)
+        else if ((other.CompareTag("Inimigo") || other.CompareTag("Boss")) && _escudoAtivo == false)
         {
-            vidaPlayerAtual = vidaPlayerAtual / 2;
+            vidaPlayerAtual /= 2;
             hpPlayerBar.value = vidaPlayerAtual;
             Destroy(other.gameObject);
             GameManager.instance.RecordPlus(-100);
         }
-
 
         if (vidaPlayerAtual <= 0)
         {
@@ -182,4 +169,3 @@ public class Personagem : MonoBehaviour
         }
     }
 }
-

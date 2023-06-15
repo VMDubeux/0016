@@ -16,7 +16,7 @@ public class Vidaextra : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<Personagem>().ganharVida(_vidaParaDar);
+            other.GetComponent<Personagem>().GanharVida(_vidaParaDar);
             Destroy(this.gameObject);
         }
     }

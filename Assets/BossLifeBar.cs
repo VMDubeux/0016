@@ -47,7 +47,7 @@ public class BossLifeBar : MonoBehaviour
             {
                 PlayerIsAudioSource.PlayOneShot(AudioClipEnemiesExplosion, 0.35f);
                 GameManager.instance.RecordPlus(pointsForGive);
-                summonPowerUp();
+                SummonPowerUp();
                 Destroy(gameObject);
                 ExplodeEnemyShip();
             }
@@ -61,14 +61,14 @@ public class BossLifeBar : MonoBehaviour
 
     private void PlayerGetPowerUp(Collision collision)      //Power up colide com o "Player"
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             GameManager.instance.RecordPlus(pointsForGive);
-            summonPowerUp();
+            SummonPowerUp();
             Destroy(gameObject);
         }
     }
-    private void summonPowerUp()        // Invoca o power up baseado em %
+    private void SummonPowerUp()        // Invoca o power up baseado em %
     {
         int porcentagem = Random.Range(0, 101);
         if (porcentagem >= 10)
