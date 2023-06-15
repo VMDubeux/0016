@@ -31,6 +31,9 @@ public class Personagem : MonoBehaviour
 
     public GameObject Score;
 
+    //Internal Variable (Enemies destroy):
+    internal int enemiesDestroyed = 0;
+
     void Start()
     {
         PlayerPrefs.SetString("CurrentScore", "0");
@@ -48,6 +51,7 @@ public class Personagem : MonoBehaviour
         MovimentacaoPlayer();
         LimiteEixoY();
         LimiteEixoX();
+        DefeatMode();
     }
 
     public void MovimentacaoPlayer()
@@ -118,20 +122,29 @@ public class Personagem : MonoBehaviour
             }
         }
 
-        if ((other.CompareTag("Inimigo") || other.CompareTag("Boss")) && _escudoAtivo == true)
+        if (other.CompareTag("Inimigo") && _escudoAtivo == true)
         {
             Destroy(other.gameObject);
 
         }
-        else if ((other.CompareTag("Inimigo") || other.CompareTag("Boss")) && _escudoAtivo == false)
+        else if (other.CompareTag("Inimigo") && _escudoAtivo == false)
         {
             vidaPlayerAtual /= 2;
             hpPlayerBar.value = vidaPlayerAtual;
             Destroy(other.gameObject);
             GameManager.instance.RecordPlus(-100);
         }
+        else if (other.CompareTag("Boss") && _escudoAtivo == false)
+        {
+            vidaPlayerAtual /= 2;
+            hpPlayerBar.value = vidaPlayerAtual;
+            GameManager.instance.RecordPlus(-100);
+        }
+    }
 
-        if (vidaPlayerAtual <= 0)
+    private void DefeatMode()
+    {
+        if (vidaPlayerAtual < 1)
         {
             Destroy(gameObject);
             Time.timeScale = 0.0f;

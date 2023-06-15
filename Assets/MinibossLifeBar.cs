@@ -40,12 +40,12 @@ public class MinibossLifeBar : MonoBehaviour
 
     public void PlayerTakeDamage(Collider other)  //Dano do inimigo no player
     {
-        if (other.CompareTag("Tiro"))
+        if (other.CompareTag("Tiro") || other.CompareTag("Player"))
         {
             vidaMinibossAtual--;
             hpMinibossBar.value = vidaMinibossAtual;
 
-            if (vidaMinibossAtual == 0 || other.CompareTag("Player"))
+            if (vidaMinibossAtual == 0)
             {
                 PlayerIsAudioSource.PlayOneShot(AudioClipEnemiesExplosion, 0.35f);
                 GameManager.instance.RecordPlus(pointsForGive);

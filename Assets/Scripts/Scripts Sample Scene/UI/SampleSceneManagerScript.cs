@@ -21,9 +21,12 @@ public class SampleSceneManagerScript : MonoBehaviour
     [Header("GameObject Complementar 3:")]
     public Transform WinMenu;
 
+    //private GameObject _player; //teste
+
     private void Start()
     {
         Time.timeScale = 1.0f;
+        //_player = GameObject.FindGameObjectWithTag("Player"); //teste
     }
 
     public void RestartGame()
@@ -37,6 +40,7 @@ public class SampleSceneManagerScript : MonoBehaviour
     {
         GameManager.instance.Definitive = GameManager.instance.Current;
         SceneManager.LoadScene(_NextGameScene);
+        //_player.GetComponent<Personagem>().enemiesDestroyed = 0; //teste
         Time.timeScale = 1.0f;
     }
 

@@ -18,11 +18,37 @@ public class VidaEnemy : MonoBehaviour
     [Header("Complementar Audio Source GameObject 3:")]
     public AudioSource PlayerIsAudioSource;
 
+    private GameObject _player;
 
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioManager>();
     }
+
+    private void Start()
+    {
+        _player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    private void Update()
+    {
+        DefeatMode();
+    }
+
+    private void DefeatMode()
+    {
+        if (vidaEnemy <= 1.0f)
+        {
+            _player.GetComponent<Personagem>().enemiesDestroyed++;
+            Debug.Log(_player.GetComponent<Personagem>().enemiesDestroyed);
+            SummonPowerUp();
+            Destroy(gameObject);
+            GameManager.instance.RecordPlus(pointsForGive);
+            audioManager.PlaySFX("Explosion", 0.15f);
+            ExplodeEnemyShip();
+        }
+    }
+
     public void OnTriggerEnter(Collider other)
     {
         EnemyTakeDamage(other);
@@ -34,16 +60,6 @@ public class VidaEnemy : MonoBehaviour
         {
             Debug.Log(other.name);
             vidaEnemy--;
-        }
-        if (vidaEnemy == 0)
-        {
-
-            SummonPowerUp();
-            Destroy(gameObject);
-            GameManager.instance.RecordPlus(pointsForGive);
-            audioManager.PlaySFX("Explosion", 0.15f);
-            ExplodeEnemyShip();
-
         }
     }
 

@@ -11510,16 +11510,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1111f4dafcadd624ca606f1785a65b2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUp:
-  - {fileID: 5734103737165884767, guid: 164b595a1e6c88b41abd22957b7970c7, type: 3}
-  - {fileID: 2467974911242988844, guid: cf33c34279d1e96438040d7de90a5100, type: 3}
-  - {fileID: 4980700237159281, guid: 5dca8a5b750db0147bf4c37ab0d2d9c1, type: 3}
   Explosion: {fileID: 418656276211360997, guid: 7dec23e4bc89b39469353539ac22e314, type: 3}
   AudioClipEnemiesExplosion: {fileID: 8300000, guid: 8121087c297d31f4f9d20f8556528288, type: 3}
   PlayerIsAudioSource: {fileID: 543450651835384008}
   hpBossBar: {fileID: 908357552215191513}
-  vidaBoss: 60
-  vidaBossAtual: 60
+  vidaBoss: 1
+  vidaBossAtual: 1
   pointsForGive: 10000
 --- !u!1001 &3215327456053487944
 PrefabInstance:
