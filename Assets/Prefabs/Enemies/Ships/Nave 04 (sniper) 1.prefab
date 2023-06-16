@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d89bebd40bd12664a8baa8f537f2634c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sniperShootPrefab: {fileID: 1170744857039610, guid: afbfa7d0f636e0a4db9f7f5959f3399e, type: 3}
+  sniperShootPrefab: {fileID: 6902646215494671166, guid: 97700b17791964740bd4fc8c04b4dfbf, type: 3}
   pontaSniper: {fileID: 343439347085156585}
   sniperShoot: 0
   sniperCDR: 3

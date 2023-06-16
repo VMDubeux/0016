@@ -9806,11 +9806,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1678985643 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2332383676732207926, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
-  m_PrefabInstance: {fileID: 3215327456053487944}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1761662890
 GameObject:
   m_ObjectHideFlags: 0
@@ -10380,10 +10375,6 @@ PrefabInstance:
     - target: {fileID: 535270476945806544, guid: 3efc225b839229f4c912ce0e10e78109, type: 3}
       propertyPath: m_Name
       value: Sniper
-      objectReference: {fileID: 0}
-    - target: {fileID: 535270476945806544, guid: 3efc225b839229f4c912ce0e10e78109, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 535270476945806547, guid: 3efc225b839229f4c912ce0e10e78109, type: 3}
       propertyPath: m_RootOrder
@@ -10981,10 +10972,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nave 04 (sniper)
       objectReference: {fileID: 0}
-    - target: {fileID: 343439347713662479, guid: 9e4286780a4cdf545a8406cbf7384d66, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e4286780a4cdf545a8406cbf7384d66, type: 3}
 --- !u!1001 &530754195114919414
@@ -10994,21 +10981,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1326735495}
     m_Modifications:
-    - target: {fileID: 533015184897126521, guid: c70a038104103ff4faba5e7235e11f4b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 533015184897126521, guid: c70a038104103ff4faba5e7235e11f4b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1394366450611615959, guid: c70a038104103ff4faba5e7235e11f4b, type: 3}
       propertyPath: m_Name
       value: Miniboss
-      objectReference: {fileID: 0}
-    - target: {fileID: 1394366450611615959, guid: c70a038104103ff4faba5e7235e11f4b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1734475515648877165, guid: c70a038104103ff4faba5e7235e11f4b, type: 3}
       propertyPath: m_RootOrder
@@ -11150,10 +11125,6 @@ PrefabInstance:
     - target: {fileID: 3182496038723127204, guid: 7224eb75d8c422a4fa2f135eddd89b05, type: 3}
       propertyPath: m_Name
       value: Pai da maria
-      objectReference: {fileID: 0}
-    - target: {fileID: 3182496038723127204, guid: 7224eb75d8c422a4fa2f135eddd89b05, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3182496038723127205, guid: 7224eb75d8c422a4fa2f135eddd89b05, type: 3}
       propertyPath: m_RootOrder
@@ -11361,10 +11332,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Serra
       objectReference: {fileID: 0}
-    - target: {fileID: 8914690907766328064, guid: f6cf88d49e426184599d6f9f962ce592, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9052866525245689093, guid: f6cf88d49e426184599d6f9f962ce592, type: 3}
       propertyPath: PlayerIsAudioSource
       value: 
@@ -11426,14 +11393,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6545597491949971011, guid: e2708827c9b1dea478398116d3792feb, type: 3}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 1678985643}
-    - target: {fileID: 6545597491949971011, guid: e2708827c9b1dea478398116d3792feb, type: 3}
-      propertyPath: _player
-      value: 
-      objectReference: {fileID: 1678985643}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2708827c9b1dea478398116d3792feb, type: 3}
 --- !u!1001 &6005797961324848467
