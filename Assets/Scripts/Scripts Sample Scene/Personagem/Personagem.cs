@@ -33,8 +33,7 @@ public class Personagem : MonoBehaviour
 
     public GameObject Score;
 
-    //Internal Variable (Enemies destroy):
-    internal int enemiesDestroyed = 0;
+
 
 
 

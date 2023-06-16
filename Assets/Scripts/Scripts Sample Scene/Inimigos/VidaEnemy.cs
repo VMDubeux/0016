@@ -18,7 +18,7 @@ public class VidaEnemy : MonoBehaviour
     [Header("Complementar Audio Source GameObject 3:")]
     public AudioSource PlayerIsAudioSource;
 
-    private GameObject _player;
+    private GameObject fase5;
 
     private void Awake()
     {
@@ -27,7 +27,8 @@ public class VidaEnemy : MonoBehaviour
 
     private void Start()
     {
-        _player = GameObject.FindGameObjectWithTag("Player");
+        fase5 = GameObject.FindGameObjectWithTag("Fase5");
+
     }
 
     private void Update()
@@ -39,8 +40,8 @@ public class VidaEnemy : MonoBehaviour
     {
         if (vidaEnemy <= 1.0f)
         {
-            _player.GetComponent<Personagem>().enemiesDestroyed++;
-            Debug.Log(_player.GetComponent<Personagem>().enemiesDestroyed);
+            fase5.GetComponent<Fase5Manager>().enemiesDestroyed++;
+            Debug.Log(fase5.GetComponent<Fase5Manager>().enemiesDestroyed);
             SummonPowerUp();
             Destroy(gameObject);
             GameManager.instance.RecordPlus(pointsForGive);

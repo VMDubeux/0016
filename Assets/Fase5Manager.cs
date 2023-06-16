@@ -29,6 +29,9 @@ public class Fase5Manager : MonoBehaviour
     [Header("Enemy:")]
     private GameObject Enemy;
 
+    //Internal Variable (Enemies destroy):
+    internal int enemiesDestroyed = 0;
+
     void Start()
     {
         Time.timeScale = 1.0f;

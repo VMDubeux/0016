@@ -17,7 +17,7 @@ public class BossLifeBar : MonoBehaviour
 
     //private GameObject[] Enemies;
 
-    private GameObject _player;
+    private GameObject fase5;
     private int _enemiesDestroyed;
 
     //Private Variables:
@@ -33,7 +33,7 @@ public class BossLifeBar : MonoBehaviour
         hpBossBar.maxValue = vidaBoss;
         hpBossBar.value = vidaBossAtual;
 
-        _player = GameObject.FindGameObjectWithTag("Player"); //teste
+        fase5 = GameObject.FindGameObjectWithTag("Fase5"); //teste
         //Enemies = GameObject.FindGameObjectsWithTag("Inimigo");
     }
 
@@ -45,7 +45,7 @@ public class BossLifeBar : MonoBehaviour
 
     private void DetectEnemiesDeath()
     {
-        _enemiesDestroyed = _player.GetComponent<Personagem>().enemiesDestroyed; //teste
+        _enemiesDestroyed = fase5.GetComponent<Fase5Manager>().enemiesDestroyed; //teste
 
         for (int i = 0; i < _enemiesDestroyed; i++)
         {

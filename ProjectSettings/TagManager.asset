@@ -17,6 +17,7 @@ TagManager:
   - Definitive
   - MusicSource
   - SfxSource
+  - Fase5
   layers:
   - Default
   - TransparentFX
