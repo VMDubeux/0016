@@ -44,7 +44,7 @@ public class Fase5Manager : MonoBehaviour
             Time.timeScale = 0.0f;
         }
 
-        if (Enemy.GetComponent<BossLifeBar>().vidaBoss <= 0)
+        if (Enemy != null && Enemy.GetComponent<BossLifeBar>().vidaBoss <= 0)
         {
             WinMenu.gameObject.SetActive(true);
             Time.timeScale = 0.0f;

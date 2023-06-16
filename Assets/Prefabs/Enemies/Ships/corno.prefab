@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 7799894574819925751}
   - component: {fileID: 5465748733363989053}
   m_Layer: 0
-  m_Name: Chifre da Maria
+  m_Name: corno
   m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

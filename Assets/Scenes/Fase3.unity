@@ -11505,8 +11505,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pontaDaArma: {fileID: 530754193528387512}
-  tiroPrefab: {fileID: 1661707786246352, guid: 368464f8326873c46857bc476ac2b0a7, type: 3}
-  timeToShootEnemy: 0.2
+  tiroPrefab: {fileID: 6902646215494671166, guid: 61c544f16821f9c45be4ea474fe51dda, type: 3}
+  timeToShootEnemy: 0.24
 --- !u!65 &1734475515648877142
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11611,6 +11611,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 543450651835384009, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
+      propertyPath: victoryCanvas
+      value: 
+      objectReference: {fileID: 473467956}
     - target: {fileID: 3215327455779663360, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
       propertyPath: m_RootOrder
       value: 13

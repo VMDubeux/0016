@@ -16120,6 +16120,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 543450651835384009, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
+      propertyPath: victoryCanvas
+      value: 
+      objectReference: {fileID: 340172191}
     - target: {fileID: 3215327455779663360, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
       propertyPath: m_RootOrder
       value: 12

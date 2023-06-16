@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pontaDaArma: {fileID: 3934151905661068462}
-  tiroPrefab: {fileID: 5892998567449712463, guid: b4a9c90662afbc24a90e543f3193bbbe, type: 3}
+  tiroPrefab: {fileID: 6902646215494671166, guid: 9af135cf7c281d641a096373633a9536, type: 3}
   timeToShootEnemy: 0.9
 --- !u!114 &3934151904911614205
 MonoBehaviour:

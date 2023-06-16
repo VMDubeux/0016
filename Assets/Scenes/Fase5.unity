@@ -460,6 +460,7 @@ Transform:
   - {fileID: 974172971670167375}
   - {fileID: 786824726}
   - {fileID: 268104521}
+  - {fileID: 8114307317457297551}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11427,6 +11428,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1527964311701712168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8114307317457297551}
+  - component: {fileID: 2442153196885254843}
+  m_Layer: 0
+  m_Name: EnemyGenerator_Nave_01_Atirador (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!114 &1734475515648877140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11490,6 +11508,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &2442153196885254843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527964311701712168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28858d69f143ac488debfcaeafbe904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy:
+  - {fileID: 4571382913565687364, guid: 2cc6fb336a1cb7e4a9702a8a74b80c02, type: 3}
 --- !u!33 &2945457506854217790
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11524,6 +11556,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 543450651835384009, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
+      propertyPath: victoryCanvas
+      value: 
+      objectReference: {fileID: 1497623591}
     - target: {fileID: 3215327455779663360, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -12290,10 +12326,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyGenerator_Nave_01_Atirador
       objectReference: {fileID: 0}
-    - target: {fileID: 9066042606087239188, guid: 5d27274441bde5746b8fdd98ac75d294, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d27274441bde5746b8fdd98ac75d294, type: 3}
 --- !u!1 &7857333105495732125
@@ -12398,6 +12430,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!4 &8114307317457297551
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527964311701712168}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 290.07355, y: 99.904465, z: -10.999949}
+  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 128405051}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &8260969033337375335
 RectTransform:
   m_ObjectHideFlags: 0

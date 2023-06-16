@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6848975400754968888}
   - component: {fileID: -5011407195931626514}
   m_Layer: 8
-  m_Name: tirocabuloso do inimigo verde
+  m_Name: tirocabuloso do inimigo Amarelo
   m_TagString: TiroEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -298,7 +298,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 0.09704245, b: 0.014705896, a: 1}
-      maxColor: {r: 0.18686834, g: 1, b: 0.06666666, a: 1}
+      maxColor: {r: 1, g: 0.8455281, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

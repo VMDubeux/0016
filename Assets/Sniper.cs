@@ -30,7 +30,7 @@ public class Sniper : MonoBehaviour
 
     public void SniperShoot()
     {
-        GameObject tiro = Instantiate(sniperShootPrefab, pontaSniper.position, pontaSniper.rotation);
+        GameObject tiro = Instantiate(sniperShootPrefab, pontaSniper.position, sniperShootPrefab.transform.rotation);
         Vector3 vector3 = transform.forward * shootingSpeed;
         tiro.GetComponent<Rigidbody>().velocity = vector3;
         sniperShoot = 0f;

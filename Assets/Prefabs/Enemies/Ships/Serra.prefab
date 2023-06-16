@@ -23,7 +23,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &619779526352068286
 Transform:
   m_ObjectHideFlags: 0
@@ -179,5 +179,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c4d367b397bbfc42a6094ac5dac322c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 3225134140922032602, guid: 3a5e994395c6d5b458c84fdb1b3b7748, type: 3}
   EnemySpeed: 150

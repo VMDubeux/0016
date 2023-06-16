@@ -11358,10 +11358,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nave 04 (sniper)
       objectReference: {fileID: 0}
-    - target: {fileID: 343439347713662479, guid: 9e4286780a4cdf545a8406cbf7384d66, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e4286780a4cdf545a8406cbf7384d66, type: 3}
 --- !u!1001 &530754195114919414
@@ -11577,6 +11573,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 543450651835384009, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
+      propertyPath: victoryCanvas
+      value: 
+      objectReference: {fileID: 1522853055}
     - target: {fileID: 3215327455779663360, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -11625,10 +11625,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4278057805831033571, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0c7f37019a1a0a44aaa1c0c95c3ec07d, type: 2}
     - target: {fileID: 7483638637908802159, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
       propertyPath: Score
       value: 
@@ -11638,17 +11634,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 848149092}
     - target: {fileID: 7483638637908802159, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
-      propertyPath: vidaPlayer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7483638637908802159, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
       propertyPath: hpPlayerBar
       value: 
       objectReference: {fileID: 2111952665}
-    - target: {fileID: 7483638637908802159, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
-      propertyPath: vidaPlayerAtual
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7483638637908802159, guid: f2b01d3d5437c5f4f893e72b3043a505, type: 3}
       propertyPath: ammoIcons.Array.data[0]
       value: 

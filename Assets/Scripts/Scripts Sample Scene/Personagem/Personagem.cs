@@ -1,5 +1,7 @@
+using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class Personagem : MonoBehaviour
 {
@@ -34,6 +36,8 @@ public class Personagem : MonoBehaviour
     //Internal Variable (Enemies destroy):
     internal int enemiesDestroyed = 0;
 
+
+
     void Start()
     {
         PlayerPrefs.SetString("CurrentScore", "0");
@@ -58,7 +62,14 @@ public class Personagem : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        transform.position += moveSpeed * Time.deltaTime * new Vector3(horizontal, vertical, 0).normalized;
+
+
+        Vector3 direction = new Vector3(horizontal, vertical, 0f).normalized;
+        Vector3 movement = moveSpeed * Time.deltaTime * direction;
+
+        transform.position += movement;
+
+        //transform.position += moveSpeed * Time.deltaTime * new Vector3(horizontal, vertical, 0).normalized;
     }
 
     private void LimiteEixoY()
@@ -181,4 +192,6 @@ public class Personagem : MonoBehaviour
             ammoIcons[i].SetActive(true);
         }
     }
+
+
 }
