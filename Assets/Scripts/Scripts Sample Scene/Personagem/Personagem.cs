@@ -51,10 +51,14 @@ public class Personagem : MonoBehaviour
 
     void Update()
     {
-        MovimentacaoPlayer();
         LimiteEixoY();
         LimiteEixoX();
         DefeatMode();
+    }
+
+    void FixedUpdate()
+    {
+        MovimentacaoPlayer();
     }
 
     public void MovimentacaoPlayer()
@@ -63,7 +67,7 @@ public class Personagem : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
 
-        Vector3 direction = new Vector3(horizontal, vertical, 0f).normalized;
+        Vector3 direction = new(horizontal, vertical, 0f);
         Vector3 movement = moveSpeed * Time.deltaTime * direction;
 
         transform.position += movement;

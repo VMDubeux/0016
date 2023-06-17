@@ -27,7 +27,7 @@ public class Fase5Manager : MonoBehaviour
     private GameObject Player;
 
     [Header("Enemy:")]
-    private GameObject Enemy;
+    private GameObject _boss;
 
     //Internal Variable (Enemies destroy):
     internal int enemiesDestroyed = 0;
@@ -36,7 +36,7 @@ public class Fase5Manager : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         Player = GameObject.FindGameObjectWithTag("Player");
-        Enemy = GameObject.FindGameObjectWithTag("Boss");
+        _boss = GameObject.FindGameObjectWithTag("Boss");
     }
 
     private void Update()
@@ -47,7 +47,7 @@ public class Fase5Manager : MonoBehaviour
             Time.timeScale = 0.0f;
         }
 
-        if (Enemy != null && Enemy.GetComponent<BossLifeBar>().vidaBoss <= 0)
+        if (_boss == null || _boss.GetComponent<BossLifeBar>().vidaBoss <= 0)
         {
             WinMenu.gameObject.SetActive(true);
             Time.timeScale = 0.0f;
