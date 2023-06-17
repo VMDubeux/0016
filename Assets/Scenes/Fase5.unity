@@ -11444,7 +11444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1734475515648877140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11546,8 +11546,8 @@ MonoBehaviour:
   AudioClipEnemiesExplosion: {fileID: 8300000, guid: 8121087c297d31f4f9d20f8556528288, type: 3}
   PlayerIsAudioSource: {fileID: 543450651835384008}
   hpBossBar: {fileID: 908357552215191513}
-  vidaBoss: 5
-  vidaBossAtual: 5
+  vidaBoss: 10
+  vidaBossAtual: 10
   pointsForGive: 10000
 --- !u!1001 &3215327456053487944
 PrefabInstance:

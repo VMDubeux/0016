@@ -47,6 +47,13 @@ public class VidaEnemy : MonoBehaviour
             GameManager.instance.RecordPlus(pointsForGive);
             audioManager.PlaySFX("Explosion", 0.15f);
             ExplodeEnemyShip();
+
+            BossLifeBar boss = FindObjectOfType<BossLifeBar>(); //modifiquei essa parte
+            if (boss != null)
+            {
+                boss.PerderVida(1);
+                boss.hpBossBar.value = boss.vidaBossAtual;
+            }
         }
     }
 
@@ -59,7 +66,6 @@ public class VidaEnemy : MonoBehaviour
     {
         if (other.CompareTag("Tiro"))
         {
-            Debug.Log(other.name);
             vidaEnemy--;
         }
     }

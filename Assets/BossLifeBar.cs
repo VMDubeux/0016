@@ -39,11 +39,20 @@ public class BossLifeBar : MonoBehaviour
 
     void Update()  //Dano do inimigo no player
     {
-        DetectEnemiesDeath();
+        //DetectEnemiesDeath();
         DefeatMode();
     }
+    public void PerderVida(int quantidade)
+    {
+        vidaBossAtual -= quantidade;
+        if (vidaBossAtual <= 0)
+        {
+            // O chefe foi derrotado
+            DefeatMode();
+        }
+    }
 
-    private void DetectEnemiesDeath()
+    /*private void DetectEnemiesDeath()
     {
         _enemiesDestroyed = fase5.GetComponent<Fase5Manager>().enemiesDestroyed; //teste
 
@@ -52,9 +61,9 @@ public class BossLifeBar : MonoBehaviour
             vidaBossAtual--;
             hpBossBar.value = vidaBossAtual;
         }
-    }
+    }*/
 
-    private void DefeatMode()
+    public void DefeatMode()
     {
         if (vidaBossAtual <= 1.0f)
         {
