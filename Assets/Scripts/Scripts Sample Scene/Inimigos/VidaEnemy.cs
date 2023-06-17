@@ -40,8 +40,8 @@ public class VidaEnemy : MonoBehaviour
     {
         if (vidaEnemy <= 1.0f)
         {
-            fase5.GetComponent<Fase5Manager>().enemiesDestroyed++;
-            Debug.Log(fase5.GetComponent<Fase5Manager>().enemiesDestroyed);
+            /*fase5.GetComponent<Fase5Manager>().enemiesDestroyed++;
+            Debug.Log(fase5.GetComponent<Fase5Manager>().enemiesDestroyed);*/
             SummonPowerUp();
             Destroy(gameObject);
             GameManager.instance.RecordPlus(pointsForGive);
