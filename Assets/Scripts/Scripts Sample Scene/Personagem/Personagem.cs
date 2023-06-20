@@ -54,21 +54,17 @@ public class Personagem : MonoBehaviour
         LimiteEixoY();
         LimiteEixoX();
         DefeatMode();
-    }
-
-    void FixedUpdate()
-    {
         MovimentacaoPlayer();
     }
 
     public void MovimentacaoPlayer()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
 
 
         Vector3 direction = new(horizontal, vertical, 0f);
-        Vector3 movement = moveSpeed * Time.deltaTime * direction;
+        Vector3 movement = moveSpeed * Time.deltaTime * direction.normalized;
 
         transform.position += movement;
 
