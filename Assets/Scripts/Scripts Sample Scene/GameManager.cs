@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
         DefinitiveScoreText.text = $"{Definitive}";
     }
 
-    void CheckHighScore()
+    public void CheckHighScore()
     {
         if (Current > High)
         {

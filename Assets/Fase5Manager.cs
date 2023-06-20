@@ -32,6 +32,9 @@ public class Fase5Manager : MonoBehaviour
     //Internal Variable (Enemies destroy):
     internal int enemiesDestroyed = 0;
 
+    //Private Variable:
+    private GameManager _gameManager;
+
     void Start()
     {
         Time.timeScale = 1.0f;
@@ -49,6 +52,7 @@ public class Fase5Manager : MonoBehaviour
 
         if (_boss == null || _boss.GetComponent<BossLifeBar>().vidaBoss <= 0)
         {
+            _gameManager.CheckHighScore();
             WinMenu.gameObject.SetActive(true);
             Time.timeScale = 0.0f;
         }
