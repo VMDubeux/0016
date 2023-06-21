@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6499683424522449457}
   - component: {fileID: -8029309557463526692}
   - component: {fileID: 4833504024790778036}
+  - component: {fileID: -1369512178955663758}
   m_Layer: 0
   m_Name: Cornasso_Esp
   m_TagString: Inimigo
@@ -35,7 +36,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 240, y: 240, z: 240}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8481447723238220492}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: -90, z: 0}
@@ -260,3 +262,49 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-1369512178955663758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5161267436376982518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f53e86fa7e68d84498fdb0e51ed976f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pontaDaArma: {fileID: 8481447723238220492}
+  tiroPrefab: {fileID: 6902646215494671166, guid: 61c544f16821f9c45be4ea474fe51dda, type: 3}
+  timeToShootEnemy: 1.5
+--- !u!1 &7158363310132869452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8481447723238220492}
+  m_Layer: 0
+  m_Name: ponta arma
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8481447723238220492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7158363310132869452}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.0913, z: -0.0431}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5542613719445068108}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

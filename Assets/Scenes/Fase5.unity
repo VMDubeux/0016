@@ -19393,8 +19393,8 @@ MonoBehaviour:
   arma: {fileID: 5423489511387681573}
   escudo: {fileID: 1788425050}
   hpPlayerBar: {fileID: 825872249}
-  vidaPlayer: 5
-  vidaPlayerAtual: 5
+  vidaPlayer: 10
+  vidaPlayerAtual: 10
   canvas: {fileID: 107404405}
   ammoIcons:
   - {fileID: 813199229}
