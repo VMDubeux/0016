@@ -130,8 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75efd3f093a995e4686f55bab1515f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaEnemy: 3
-  pointsForGive: 50
+  vidaEnemy: 4
+  pointsForGive: 40
   powerUp:
   - {fileID: 5734103737165884767, guid: 164b595a1e6c88b41abd22957b7970c7, type: 3}
   - {fileID: 4980700237159281, guid: 5dca8a5b750db0147bf4c37ab0d2d9c1, type: 3}

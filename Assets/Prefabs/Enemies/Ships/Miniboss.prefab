@@ -233,7 +233,7 @@ MonoBehaviour:
   hpMinibossBar: {fileID: 848572568541325871}
   vidaMiniboss: 50
   vidaMinibossAtual: 50
-  pointsForGive: 1000
+  pointsForGive: 500
 --- !u!54 &2256169729955899295
 Rigidbody:
   m_ObjectHideFlags: 0

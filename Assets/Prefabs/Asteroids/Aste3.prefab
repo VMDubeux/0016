@@ -142,8 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4940612437120c9448bbde0cf7a58226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaAsteroid: 2
-  pointsForGive: 15
+  vidaAsteroid: 3
+  pointsForGive: 30
   Explosion: {fileID: 418656276211360997, guid: 7dec23e4bc89b39469353539ac22e314, type: 3}
   AudioClipEnemiesExplosion: {fileID: 8300000, guid: 8121087c297d31f4f9d20f8556528288, type: 3}
   PlayerIsAudioSource: {fileID: 6149137181777202504, guid: 332d8f85a6cc9c742b1e215fa1fc4c64, type: 3}

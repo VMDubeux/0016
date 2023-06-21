@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaEnemy: 7
-  pointsForGive: 250
+  pointsForGive: 70
   powerUp:
   - {fileID: 4980700237159281, guid: 5dca8a5b750db0147bf4c37ab0d2d9c1, type: 3}
   - {fileID: 5734103737165884767, guid: 164b595a1e6c88b41abd22957b7970c7, type: 3}
@@ -70,7 +70,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c4d367b397bbfc42a6094ac5dac322c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SerraPrefab: {fileID: 0}
   Player: {fileID: 0}
   EnemySpeed: 50
 --- !u!114 &8412004058178361307

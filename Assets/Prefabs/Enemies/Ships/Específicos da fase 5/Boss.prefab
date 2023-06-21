@@ -1278,7 +1278,7 @@ MonoBehaviour:
   hpBossBar: {fileID: 4325708305126024681}
   vidaBoss: 100
   vidaBossAtual: 100
-  pointsForGive: 10000
+  pointsForGive: 1000
 --- !u!1 &6737597846442411536
 GameObject:
   m_ObjectHideFlags: 0

@@ -159,8 +159,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75efd3f093a995e4686f55bab1515f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaEnemy: 2
-  pointsForGive: 50
+  vidaEnemy: 6
+  pointsForGive: 60
   powerUp:
   - {fileID: 5734103737165884767, guid: 164b595a1e6c88b41abd22957b7970c7, type: 3}
   - {fileID: 2467974911242988844, guid: cf33c34279d1e96438040d7de90a5100, type: 3}
