@@ -16881,7 +16881,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   victoryCanvas: {fileID: 473467956}
-  victoryKey: 118
+  victoryKey: 283
+  moremorepoints: 286
 --- !u!33 &3469287836702514898
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -17090,6 +17091,13 @@ MonoBehaviour:
   PlayerIsAudioSource: {fileID: 5423489511387681576}
   PlayerAudioShoot: {fileID: 8300000, guid: eae040a48f622b34fbfcdcc73ab9b732, type: 3}
   PlayerBulletSpeed: 300
+  ammoIcons:
+  - {fileID: 9566681}
+  - {fileID: 1436659859}
+  - {fileID: 1751200961}
+  - {fileID: 237492973}
+  - {fileID: 1322481352}
+  allGuns: 285
 --- !u!114 &5423489511387681574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17116,6 +17124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arma: {fileID: 5423489511387681573}
   escudo: {fileID: 1788425050}
+  _tempoMaximoEscudo: 5
   hpPlayerBar: {fileID: 572654492}
   vidaPlayer: 5
   vidaPlayerAtual: 5
@@ -17127,6 +17136,8 @@ MonoBehaviour:
   - {fileID: 237492973}
   - {fileID: 1322481352}
   Score: {fileID: 1375164019}
+  infinityShield: 284
+  allguns: 285
 --- !u!82 &5423489511387681576
 AudioSource:
   m_ObjectHideFlags: 0

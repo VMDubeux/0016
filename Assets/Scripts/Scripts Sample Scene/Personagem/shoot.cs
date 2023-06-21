@@ -19,6 +19,11 @@ public class shoot : MonoBehaviour
 
     private AudioManager audioManager;
 
+    public GameObject[] ammoIcons;
+
+
+    public KeyCode allGuns = KeyCode.F5;
+
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioManager>();
@@ -32,6 +37,22 @@ public class shoot : MonoBehaviour
     void Update()
     {
         Atirar();
+
+        if (Input.GetKeyDown(allGuns))
+        {
+
+            PlayerBulletNumber++;
+            shoot tiro = gameObject.GetComponent<shoot>();
+            for (int i = 0; i < 5; i++)
+            {
+                ammoIcons[i].SetActive(false);
+            }
+
+            for (int i = 0; i < tiro.PlayerBulletNumber; i++)
+            {
+                ammoIcons[i].SetActive(true);
+            }
+        }
     }
 
     public void Atirar()

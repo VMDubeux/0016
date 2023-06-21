@@ -16191,6 +16191,21 @@ Transform:
   m_Father: {fileID: 543450651835384004}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 180}
+--- !u!4 &543450651671952914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148004037800}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 11}
+  m_LocalScale: {x: 14.272249, y: 14.272249, z: 14.272249}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &543450651835384004
 Transform:
   m_ObjectHideFlags: 0
@@ -16270,6 +16285,22 @@ GameObject:
   m_Layer: 0
   m_Name: DroneAliado (1)
   m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &919132148004037800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 543450651671952914}
+  m_Layer: 0
+  m_Name: InimigoDrone1
+  m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16436,7 +16467,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   victoryCanvas: {fileID: 1522853055}
-  victoryKey: 118
+  victoryKey: 283
+  moremorepoints: 286
 --- !u!33 &3469287836702514898
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -16581,6 +16613,13 @@ MonoBehaviour:
   PlayerIsAudioSource: {fileID: 5423489511387681576}
   PlayerAudioShoot: {fileID: 8300000, guid: eae040a48f622b34fbfcdcc73ab9b732, type: 3}
   PlayerBulletSpeed: 300
+  ammoIcons:
+  - {fileID: 855499985}
+  - {fileID: 195053968}
+  - {fileID: 543914202}
+  - {fileID: 1372787546}
+  - {fileID: 6762605}
+  allGuns: 285
 --- !u!114 &5423489511387681574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16607,6 +16646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arma: {fileID: 5423489511387681573}
   escudo: {fileID: 1788425050}
+  _tempoMaximoEscudo: 5
   hpPlayerBar: {fileID: 2111952665}
   vidaPlayer: 5
   vidaPlayerAtual: 5
@@ -16618,6 +16658,8 @@ MonoBehaviour:
   - {fileID: 1372787546}
   - {fileID: 6762605}
   Score: {fileID: 2843162}
+  infinityShield: 284
+  allguns: 285
 --- !u!82 &5423489511387681576
 AudioSource:
   m_ObjectHideFlags: 0

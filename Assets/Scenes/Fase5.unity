@@ -2718,7 +2718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d89bebd40bd12664a8baa8f537f2634c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sniperShootPrefab: {fileID: 6902646215494671166, guid: fbde3e83e559e1343bcf81c5a2e0a05d, type: 3}
+  sniperShootPrefab: {fileID: 6902646215494671166, guid: 1a9517ef001fb024388c66936afab15c, type: 3}
   pontaSniper: {fileID: 523043789}
   sniperShoot: 0
   sniperCDR: 2
@@ -11398,7 +11398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d89bebd40bd12664a8baa8f537f2634c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sniperShootPrefab: {fileID: 6902646215494671166, guid: fbde3e83e559e1343bcf81c5a2e0a05d, type: 3}
+  sniperShootPrefab: {fileID: 6902646215494671166, guid: 97700b17791964740bd4fc8c04b4dfbf, type: 3}
   pontaSniper: {fileID: 515491014}
   sniperShoot: 0
   sniperCDR: 2
@@ -17193,7 +17193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d89bebd40bd12664a8baa8f537f2634c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sniperShootPrefab: {fileID: 6902646215494671166, guid: fbde3e83e559e1343bcf81c5a2e0a05d, type: 3}
+  sniperShootPrefab: {fileID: 6902646215494671166, guid: 61c544f16821f9c45be4ea474fe51dda, type: 3}
   pontaSniper: {fileID: 400465225}
   sniperShoot: 0
   sniperCDR: 2
@@ -18993,7 +18993,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   victoryCanvas: {fileID: 1497623591}
-  victoryKey: 118
+  victoryKey: 283
+  moremorepoints: 286
 --- !u!33 &3137991442344748954
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -19366,6 +19367,13 @@ MonoBehaviour:
   PlayerIsAudioSource: {fileID: 5423489511387681576}
   PlayerAudioShoot: {fileID: 8300000, guid: eae040a48f622b34fbfcdcc73ab9b732, type: 3}
   PlayerBulletSpeed: 300
+  ammoIcons:
+  - {fileID: 813199229}
+  - {fileID: 1840486262}
+  - {fileID: 1028719799}
+  - {fileID: 966515912}
+  - {fileID: 495453134}
+  allGuns: 285
 --- !u!114 &5423489511387681574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19392,6 +19400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arma: {fileID: 5423489511387681573}
   escudo: {fileID: 1788425050}
+  _tempoMaximoEscudo: 5
   hpPlayerBar: {fileID: 825872249}
   vidaPlayer: 10
   vidaPlayerAtual: 10
@@ -19403,6 +19412,8 @@ MonoBehaviour:
   - {fileID: 966515912}
   - {fileID: 495453134}
   Score: {fileID: 1654868673}
+  infinityShield: 284
+  allguns: 285
 --- !u!82 &5423489511387681576
 AudioSource:
   m_ObjectHideFlags: 0

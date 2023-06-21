@@ -7,6 +7,7 @@ public class MultGun : MonoBehaviour
     private Personagem personagem;
 
 
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

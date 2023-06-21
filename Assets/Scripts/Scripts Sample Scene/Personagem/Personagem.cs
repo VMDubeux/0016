@@ -16,7 +16,7 @@ public class Personagem : MonoBehaviour
 
     //Shield Private Variables:
     private bool _escudoAtivo;
-    private float _tempoMaximoEscudo = 5.0f;
+    public float _tempoMaximoEscudo;
 
 
     [Header("Complementar GameObject 2:")]
@@ -34,6 +34,9 @@ public class Personagem : MonoBehaviour
     public GameObject[] ammoIcons;
 
     public GameObject Score;
+
+    public KeyCode infinityShield = KeyCode.F3;
+    public KeyCode allguns = KeyCode.F4;
 
 
 
@@ -59,6 +62,17 @@ public class Personagem : MonoBehaviour
         LimiteEixoX();
         DefeatMode();
         MovimentacaoPlayer();
+
+        if (Input.GetKeyDown(infinityShield))
+        {
+            CancelInvoke("DesactivePlayerShield");
+            _tempoMaximoEscudo = 90;
+            escudo.SetActive(true);
+            _escudoAtivo = true;
+            Invoke("DesactivePlayerShield", _tempoMaximoEscudo);
+            escudo.GetComponent<ParticleSystem>().Play();
+        }
+
     }
 
     public void MovimentacaoPlayer()
@@ -193,7 +207,11 @@ public class Personagem : MonoBehaviour
         _escudoAtivo = true;
         Invoke("DesactivePlayerShield", _tempoMaximoEscudo);
         escudo.GetComponent<ParticleSystem>().Play();
+
+
     }
+
+    
 
     public void DesactivePlayerShield()
     {
