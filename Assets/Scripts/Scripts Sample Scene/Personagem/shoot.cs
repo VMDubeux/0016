@@ -53,14 +53,12 @@ public class shoot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z) || Input.GetButtonDown("Fire1") && !Input.GetKey(KeyCode.X) && Time.timeScale == 1.0f)
         {
-            audioManager.PlaySFX("Shoot", 0.65f);
-
             yield return new WaitForSecondsRealtime(0.2f);
 
+            audioManager.PlaySFX("Shoot", 0.65f);
 
             for (int i = 0; i < PlayerBulletNumber; i++)
             {
-
                 var _playerBullet = Instantiate(PlayerNormalBulletPrefab, PlayerBulletSpawnPoint[i].position, PlayerBulletSpawnPoint[i].rotation);
                 _playerBullet.GetComponent<Rigidbody>().velocity = PlayerBulletSpawnPoint[i].right * PlayerBulletSpeed;
             }

@@ -67,13 +67,21 @@ public class Personagem : MonoBehaviour
 
         float vertical = Input.GetAxisRaw("Vertical");
 
-        if(vertical > 0)
+        if (vertical == 0) 
         {
+            playerAnimator.SetBool("idle", true);
+            playerAnimator.SetBool("up", false);
+            playerAnimator.SetBool("down", false);
+        }
+        else if (vertical > 0)
+        {
+            playerAnimator.SetBool("idle", false);
             playerAnimator.SetBool("up", true);
-            playerAnimator.SetBool("down", false);   
+            playerAnimator.SetBool("down", false);
         }
         else if (vertical < 0)
         {
+            playerAnimator.SetBool("idle", false);
             playerAnimator.SetBool("up", false);
             playerAnimator.SetBool("down", true);
         }

@@ -16518,6 +16518,7 @@ GameObject:
   - component: {fileID: 5423489511387681574}
   - component: {fileID: 5423489511387681573}
   - component: {fileID: 3104557066962512257}
+  - component: {fileID: 5423489511387681577}
   m_Layer: 0
   m_Name: Nave do player
   m_TagString: Player
@@ -17152,7 +17153,6 @@ MonoBehaviour:
   PlayerIsAudioSource: {fileID: 5423489511387681576}
   PlayerAudioShoot: {fileID: 8300000, guid: eae040a48f622b34fbfcdcc73ab9b732, type: 3}
   PlayerBulletSpeed: 300
-  PlayerFireRateKeyX: 0.2
 --- !u!114 &5423489511387681574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17286,6 +17286,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &5423489511387681577
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147831937662}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ee73a7aa342b7784a8b561398743e90c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &5895109737433738698
 MonoBehaviour:
   m_ObjectHideFlags: 0

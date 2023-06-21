@@ -10,7 +10,7 @@ public class GeradorInimigoBoss : MonoBehaviour
     //Private Variables:
     //Spawn Time:
     private readonly sbyte _spawnDelay = 1;
-    private readonly float _spawnRepeatTime = 1.5f;
+    private readonly float _spawnRepeatTime = 0.75f;
 
     void Start()
     {
