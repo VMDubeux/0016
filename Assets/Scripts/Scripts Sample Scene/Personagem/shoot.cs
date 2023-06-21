@@ -14,6 +14,7 @@ public class shoot : MonoBehaviour
     public AudioClip PlayerAudioShoot;
     public float PlayerBulletSpeed;
     private readonly float PlayerFireRateKeyX = 0.75f;
+    private readonly float PlayerFireRateKeyZ = 0.25f;
     private float _playerNextShoot = 0.0f;
 
     private AudioManager audioManager;
@@ -31,12 +32,11 @@ public class shoot : MonoBehaviour
     void Update()
     {
         Atirar();
-        StartCoroutine(PlayerShootingInputWithKeyZ());
     }
 
     public void Atirar()
     {
-        if (Input.GetKey(KeyCode.X) && (Time.time > _playerNextShoot) && !Input.GetKeyDown(KeyCode.Z) && Time.timeScale == 1.0f)
+        if ((Input.GetKey(KeyCode.X) || Input.GetKey(KeyCode.Mouse1)) && (Time.time > _playerNextShoot) && !Input.GetKeyDown(KeyCode.Z) && Time.timeScale == 1.0f)
         {
             _playerNextShoot = Time.time + PlayerFireRateKeyX;
             audioManager.PlaySFX("Shoot", 0.65f);
@@ -47,14 +47,9 @@ public class shoot : MonoBehaviour
                 _playerBullet.GetComponent<Rigidbody>().velocity = PlayerBulletSpawnPoint[i].right * PlayerBulletSpeed;
             }
         }
-    }
-
-    IEnumerator PlayerShootingInputWithKeyZ()
-    {
-        if (Input.GetKeyDown(KeyCode.Z) || Input.GetButtonDown("Fire1") && !Input.GetKey(KeyCode.X) && Time.timeScale == 1.0f)
+        else if ((Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Mouse0)) && !Input.GetKey(KeyCode.X) && Time.timeScale == 1.0f)
         {
-            yield return new WaitForSecondsRealtime(0.2f);
-
+            _playerNextShoot = Time.time + PlayerFireRateKeyZ;
             audioManager.PlaySFX("Shoot", 0.65f);
 
             for (int i = 0; i < PlayerBulletNumber; i++)
