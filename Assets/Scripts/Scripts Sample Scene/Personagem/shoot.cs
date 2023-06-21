@@ -51,7 +51,7 @@ public class shoot : MonoBehaviour
 
     IEnumerator PlayerShootingInputWithKeyZ()
     {
-        if (Input.GetKeyDown(KeyCode.Z) && !Input.GetKey(KeyCode.X) && Time.timeScale == 1.0f)
+        if (Input.GetKeyDown(KeyCode.Z) || Input.GetButtonDown("Fire1") && !Input.GetKey(KeyCode.X) && Time.timeScale == 1.0f)
         {
             audioManager.PlaySFX("Shoot", 0.65f);
 

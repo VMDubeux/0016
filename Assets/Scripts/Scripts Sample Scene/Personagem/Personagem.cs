@@ -26,6 +26,8 @@ public class Personagem : MonoBehaviour
     public int vidaPlayer;
     public int vidaPlayerAtual;
 
+    private Animator playerAnimator;
+
     [Header("Complementar GameObject 3:")] //Menu de derrota.
     public Canvas canvas;
 
@@ -47,6 +49,8 @@ public class Personagem : MonoBehaviour
         vidaPlayerAtual = vidaPlayer;
         hpPlayerBar.maxValue = vidaPlayer;
         hpPlayerBar.value = vidaPlayerAtual;
+
+        playerAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -60,8 +64,19 @@ public class Personagem : MonoBehaviour
     public void MovimentacaoPlayer()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
+
         float vertical = Input.GetAxisRaw("Vertical");
 
+        if(vertical > 0)
+        {
+            playerAnimator.SetBool("up", true);
+            playerAnimator.SetBool("down", false);   
+        }
+        else if (vertical < 0)
+        {
+            playerAnimator.SetBool("up", false);
+            playerAnimator.SetBool("down", true);
+        }
 
         Vector3 direction = new(horizontal, vertical, 0f);
         Vector3 movement = moveSpeed * Time.deltaTime * direction.normalized;

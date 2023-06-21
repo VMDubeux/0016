@@ -3191,7 +3191,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063721453}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.12075958, y: -1.94, z: 121}
+  m_LocalPosition: {x: -0.12075958, y: -1.66, z: 121}
   m_LocalScale: {x: 1.72, y: 2.89, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16716,7 +16716,6 @@ MonoBehaviour:
   PlayerIsAudioSource: {fileID: 5423489511387681576}
   PlayerAudioShoot: {fileID: 8300000, guid: eae040a48f622b34fbfcdcc73ab9b732, type: 3}
   PlayerBulletSpeed: 300
-  PlayerFireRateKeyX: 0.2
 --- !u!114 &5423489511387681574
 MonoBehaviour:
   m_ObjectHideFlags: 0
