@@ -13,7 +13,7 @@ public class EnemyGeneratorSniper : MonoBehaviour
     Transform Player;
     //Spawn Time:
     private float _spawnDelay = 1.5f;
-    private float _spawnRepeatTime = 3.5f;
+    private float _spawnRepeatTime = 5f;
 
     void Start()
     {

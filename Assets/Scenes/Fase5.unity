@@ -858,8 +858,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 364253374}
-  - component: {fileID: 364253375}
   - component: {fileID: 364253376}
+  - component: {fileID: 364253378}
   - component: {fileID: 364253377}
   m_Layer: 0
   m_Name: Fase 5 Manager
@@ -883,19 +883,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &364253375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364253372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 846cde8dfb49d334584b6547137596ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimerSlider: {fileID: 909910574}
 --- !u!114 &364253376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -927,6 +914,19 @@ MonoBehaviour:
   PauseMenu: {fileID: 1563794158}
   LoseMenu: {fileID: 107404406}
   WinMenu: {fileID: 1497623592}
+--- !u!114 &364253378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364253372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32725160fe49b374d8e1d9195b86469e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimerSlider: {fileID: 909910574}
 --- !u!1 &400465224
 GameObject:
   m_ObjectHideFlags: 0
@@ -4353,7 +4353,7 @@ GameObject:
   - component: {fileID: 1204600952}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
