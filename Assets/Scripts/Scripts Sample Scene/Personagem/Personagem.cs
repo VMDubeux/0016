@@ -36,7 +36,7 @@ public class Personagem : MonoBehaviour
     public GameObject Score;
 
     public KeyCode infinityShield = KeyCode.F3;
-    public KeyCode allguns = KeyCode.F4;
+    //public KeyCode allguns = KeyCode.F4;
 
 
 
@@ -72,7 +72,6 @@ public class Personagem : MonoBehaviour
             Invoke("DesactivePlayerShield", _tempoMaximoEscudo);
             escudo.GetComponent<ParticleSystem>().Play();
         }
-
     }
 
     public void MovimentacaoPlayer()
@@ -207,11 +206,7 @@ public class Personagem : MonoBehaviour
         _escudoAtivo = true;
         Invoke("DesactivePlayerShield", _tempoMaximoEscudo);
         escudo.GetComponent<ParticleSystem>().Play();
-
-
     }
-
-    
 
     public void DesactivePlayerShield()
     {
@@ -232,6 +227,4 @@ public class Personagem : MonoBehaviour
             ammoIcons[i].SetActive(true);
         }
     }
-
-
 }

@@ -52,8 +52,8 @@ public class Fase5Manager : MonoBehaviour
 
         if (_boss == null || _boss.GetComponent<BossLifeBar>().vidaBoss <= 0)
         {
+            GameManager.instance.CheckHighScore();
             WinMenu.gameObject.SetActive(true);
-            _gameManager.CheckHighScore();
             Time.timeScale = 0.0f;
         }
     }

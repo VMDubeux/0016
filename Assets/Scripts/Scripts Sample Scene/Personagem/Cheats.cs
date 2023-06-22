@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Cheats : MonoBehaviour
 {
-
     public Canvas victoryCanvas;
     public KeyCode victoryKey = KeyCode.F2;
     public KeyCode moremorepoints = KeyCode.F5;
@@ -31,8 +30,5 @@ public class Cheats : MonoBehaviour
         hasWon = true;
         Time.timeScale = 0.0f;
         victoryCanvas.gameObject.SetActive(true);
-
     }
-
-
 }
