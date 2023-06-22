@@ -7957,6 +7957,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1063874877763436898, guid: e778368a386ef99428f8cc652e0f6034, type: 3}
+      propertyPath: m_Name
+      value: Tutorial WASD
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063874877763436908, guid: e778368a386ef99428f8cc652e0f6034, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 855f06b721b77bb40abb7b2c21502172, type: 3}
+    - target: {fileID: 1063874878914641833, guid: e778368a386ef99428f8cc652e0f6034, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a2c24e29464654b4798c87f2cd75b15e, type: 3}
+    - target: {fileID: 1063874878914641839, guid: e778368a386ef99428f8cc652e0f6034, type: 3}
+      propertyPath: m_Name
+      value: Tutorial setinhas
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e778368a386ef99428f8cc652e0f6034, type: 3}
 --- !u!1 &1113990598

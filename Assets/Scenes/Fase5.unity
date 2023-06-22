@@ -4393,9 +4393,9 @@ MonoBehaviour:
   AudioClipEnemiesExplosion: {fileID: 8300000, guid: 8121087c297d31f4f9d20f8556528288, type: 3}
   PlayerIsAudioSource: {fileID: 5423489511387681576}
   hpBossBar: {fileID: 7028079714497397534}
-  vidaBoss: 100
-  vidaBossAtual: 100
-  pointsForGive: 10000
+  vidaBoss: 5
+  vidaBossAtual: 5
+  pointsForGive: 350
 --- !u!1 &1229258804
 GameObject:
   m_ObjectHideFlags: 0
