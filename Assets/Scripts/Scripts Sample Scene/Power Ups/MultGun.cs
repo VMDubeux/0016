@@ -5,9 +5,13 @@ public class MultGun : MonoBehaviour
     //private float speedPowerUp;
     private shoot armaPlayer;
     private Personagem personagem;
+    private AudioManager audioManager;
 
 
-
+    private void Start()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioManager>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -30,7 +34,7 @@ public class MultGun : MonoBehaviour
                 powerUp.PlayerBulletNumber++;
                 personagem.UpdateAmmoIcons();
             }
-
+            audioManager.PlaySFX("PickPowerUp", 0.65f);
             armaPlayer = other.GetComponent<shoot>();
 
 

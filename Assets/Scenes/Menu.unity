@@ -1647,6 +1647,8 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: 8121087c297d31f4f9d20f8556528288, type: 3}
   - Name: Shoot
     Clip: {fileID: 8300000, guid: eae040a48f622b34fbfcdcc73ab9b732, type: 3}
+  - Name: PickPowerUp
+    Clip: {fileID: 8300000, guid: 4b7ed3a22328ad9469ae2d4049193efc, type: 3}
   MusicSource: {fileID: 1124104701}
   SfxSource: {fileID: 936942821}
 --- !u!1 &1124104700
