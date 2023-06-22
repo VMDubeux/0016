@@ -34,7 +34,7 @@ public class MultGun : MonoBehaviour
                 powerUp.PlayerBulletNumber++;
                 personagem.UpdateAmmoIcons();
             }
-            audioManager.PlaySFX("PickPowerUp", 0.65f);
+            audioManager.PlaySFX("PickPowerUp", 0.05f);
             armaPlayer = other.GetComponent<shoot>();
 
 

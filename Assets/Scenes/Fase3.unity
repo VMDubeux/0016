@@ -1237,7 +1237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 364253374}
-  - component: {fileID: 364253375}
+  - component: {fileID: 364253378}
   - component: {fileID: 364253376}
   - component: {fileID: 364253377}
   m_Layer: 0
@@ -1262,19 +1262,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &364253375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364253372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 846cde8dfb49d334584b6547137596ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimerSlider: {fileID: 2073680049}
 --- !u!114 &364253376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1306,6 +1293,19 @@ MonoBehaviour:
   PauseMenu: {fileID: 1634042262}
   LoseMenu: {fileID: 881217092}
   WinMenu: {fileID: 473467957}
+--- !u!114 &364253378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364253372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b51872052bff9408282d58149b511f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimerSlider: {fileID: 2073680049}
 --- !u!1 &406648171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1712,7 +1712,7 @@ RectTransform:
   m_GameObject: {fileID: 626218509}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8, y: 3.5, z: 3.5}
+  m_LocalScale: {x: 6, y: 3.5, z: 3.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2046625402}

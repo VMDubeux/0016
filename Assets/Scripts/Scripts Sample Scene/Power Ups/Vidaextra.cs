@@ -22,7 +22,7 @@ public class Vidaextra : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.GetComponent<Personagem>().GanharVida(_vidaParaDar);
-            audioManager.PlaySFX("PickPowerUp", 0.65f);
+            audioManager.PlaySFX("PickPowerUp", 0.05f);
             Destroy(this.gameObject);
         }
     }

@@ -18,7 +18,7 @@ public class Shield : MonoBehaviour
         {
 
             other.GetComponent<Personagem>().PlayerShield();
-            audioManager.PlaySFX("PickPowerUp", 0.65f);
+            AudioManager.Instance.PlaySFX("PickPowerUp", 0.05f); //teste
             Destroy(this.gameObject);
         }
     }
