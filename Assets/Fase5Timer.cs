@@ -26,6 +26,7 @@ public class Fase5Timer : MonoBehaviour
         if (_timer >= _gameTime)
         {
             _stopTimer = true;
+            GameManager.instance.CheckHighScore();
             GetComponent<Fase5Manager>().WinMenu.gameObject.SetActive(true);
             Time.timeScale = 0.0f;
         }

@@ -26,6 +26,7 @@ public class SamplesSceneTimer : MonoBehaviour
         if (_timer >= _gameTime)
         {
             _stopTimer = true;
+            GameManager.instance.CheckHighScore();
             GetComponent<SampleSceneManagerScript>().WinMenu.gameObject.SetActive(true);
             Time.timeScale = 0.0f;
         }

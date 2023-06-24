@@ -61,6 +61,7 @@ public class Fase3Manager : MonoBehaviour
     public void NextGameScene()
     {
         GameManager.instance.Definitive = GameManager.instance.Current;
+        GameManager.instance.CheckHighScore();
         SceneManager.LoadScene(_NextGameScene);
         Time.timeScale = 1.0f;
     }

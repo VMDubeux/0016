@@ -65,12 +65,15 @@ public class Fase5Manager : MonoBehaviour
     public void NextGameScene()
     {
         GameManager.instance.Definitive = GameManager.instance.Current;
+        GameManager.instance.CheckHighScore();
         SceneManager.LoadScene(_NextGameScene);
         Time.timeScale = 1.0f;
     }
 
     public void ReturnToMainMenu()
     {
+        GameManager.instance.Definitive = GameManager.instance.Current;
+        GameManager.instance.CheckHighScore();
         GameManager.instance.Current = 0;
         GameManager.instance.Definitive = 0;
         SceneManager.LoadScene(_Menu);

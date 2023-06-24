@@ -59,9 +59,10 @@ public class GameManager : MonoBehaviour
 
     public void CheckHighScore()
     {
-        if (Current > High)
+        if (Definitive > High)
         {
-            PlayerPrefs.SetString("HighScore", System.Convert.ToString(Current));
+            PlayerPrefs.SetString("HighScore", System.Convert.ToString(Definitive));
+            HighScoreText.text = PlayerPrefs.GetString("HighScore");
         }
     }
 }
