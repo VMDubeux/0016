@@ -87,7 +87,7 @@ public class VidaEnemy : MonoBehaviour
     public void SummonPowerUp()        // Invoca o power up baseado em %
     {
         int porcentagem = Random.Range(0, 101);
-        if (porcentagem >= 20)
+        if (porcentagem >= 80)
         {
             int powerUps = Random.Range(0, powerUp.Length);
             GameObject tirasso = Instantiate(powerUp[powerUps], transform.position, powerUp[powerUps].transform.rotation);

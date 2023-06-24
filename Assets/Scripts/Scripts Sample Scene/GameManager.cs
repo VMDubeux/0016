@@ -23,7 +23,8 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-        } else Destroy(gameObject);
+        }
+        else Destroy(gameObject);
     }
 
     void Start()
@@ -46,8 +47,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        CurrentScoreText.text = $"{Current}";
         CheckHighScore();
+        CurrentScoreText.text = $"{Current}";
     }
 
     public void RecordPlus(int pointsForWin)

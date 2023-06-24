@@ -32,9 +32,6 @@ public class Fase5Manager : MonoBehaviour
     //Internal Variable (Enemies destroy):
     internal int enemiesDestroyed = 0;
 
-    //Private Variable:
-    private GameManager _gameManager;
-
     void Start()
     {
         Time.timeScale = 1.0f;
